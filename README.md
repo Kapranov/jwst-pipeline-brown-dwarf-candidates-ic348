@@ -143,43 +143,27 @@ dataURL:           mast:JWST/product/jw01257-o003_t005_nircam_f444w-f470n_i2d.fi
 *Stage #0 Downloading files for reduction and researching*:
 
 ```
-bash> cd $HOME/data_jwst/jwst_pipeline_catalog_bd_candidates_in_ic348
-bash> python -m venv ~/astro_env; source ~/astro_env/bin/activate
+bash> cd $HOME/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348
+bash> python -m venv ~/astro_env; source ~/astro_env/bin/activate; export DISPLAY=:0
 ```
 
 ```
-├── jw01257-o003_t005_nircam_f150w2-f162m
-│   ├── jw01257_20260714t164831_pool.csv
-│   ├── jw01257-o003_20260714t164831_image3_00002_asn.json
-│   ├── jw01257-o003_t005_nircam_f150w2-f162m_cat.ecsv
-│   ├── jw01257-o003_t005_nircam_f150w2-f162m_i2d.fits
-│   └── jw01257-o003_t005_nircam_f150w2-f162m_segm.fits
-├── jw01257-o003_t005_nircam_f150w2-f164n
-│   ├── jw01257_20260714t164831_pool.csv
-│   ├── jw01257-o003_20260714t164831_image3_00009_asn.json
-│   ├── jw01257-o003_t005_nircam_f150w2-f164n_cat.ecsv
-│   ├── jw01257-o003_t005_nircam_f150w2-f164n_i2d.fits
-│   └── jw01257-o003_t005_nircam_f150w2-f164n_segm.fits
-├── jw01257-o003_t005_nircam_f322w2-f323n
-│   ├── jw01257_20260714t164831_pool.csv
-│   ├── jw01257-o003_20260714t164831_image3_00005_asn.json
-│   ├── jw01257-o003_t005_nircam_f322w2-f323n_cat.ecsv
-│   ├── jw01257-o003_t005_nircam_f322w2-f323n_i2d.fits
-│   └── jw01257-o003_t005_nircam_f322w2-f323n_segm.fits
-├── jw01257-o003_t005_nircam_f444w-f466n
-│   ├── jw01257_20260714t164831_pool.csv
-│   ├── jw01257-o003_20260714t164831_image3_00008_asn.json
-│   ├── jw01257-o003_t005_nircam_f444w-f466n_cat.ecsv
-│   ├── jw01257-o003_t005_nircam_f444w-f466n_i2d.fits
-│   └── jw01257-o003_t005_nircam_f444w-f466n_segm.fits
-└── jw01257-o003_t005_nircam_f444w-f470n
-    ├── jw01257_20260714t164831_pool.csv
-    ├── jw01257-o003_20260714t164831_image3_00007_asn.json
-    ├── jw01257-o003_t005_nircam_f444w-f470n_cat.ecsv
-    ├── jw01257-o003_t005_nircam_f444w-f470n_i2d.fits
-    └── jw01257-o003_t005_nircam_f444w-f470n_segm.fits
+mastDownload/
+└── JWST
+    ├── jw01257003001_02101_00001_nrca1
+    │   └── jw01257_20260714t164831_pool.csv
+    ├── jw01257-o003_t005_nircam_f150w2-f162m
+    │   └── jw01257-o003_20260714t164831_image3_00002_asn.json
+    ├── jw01257-o003_t005_nircam_f150w2-f164n
+    │   └── jw01257-o003_20260714t164831_image3_00009_asn.json
+    ├── jw01257-o003_t005_nircam_f322w2-f323n
+    │   └── jw01257-o003_20260714t164831_image3_00005_asn.json
+    ├── jw01257-o003_t005_nircam_f444w-f466n
+    │   └── jw01257-o003_20260714t164831_image3_00008_asn.json
+    └── jw01257-o003_t005_nircam_f444w-f470n
+        └── jw01257-o003_20260714t164831_image3_00007_asn.json
 
-6 directories, 25 files
+8 directories, 6 files
 ```
 
 JWST pipeline fully operational and delivering a clean, publication-ready
