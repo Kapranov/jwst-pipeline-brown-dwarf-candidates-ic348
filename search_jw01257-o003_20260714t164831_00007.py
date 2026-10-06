@@ -1,27 +1,52 @@
+import os
+import sys
 from astroquery.mast import Observations
 
-Observations.login(token="268b72a1bcf2473fa21cea468ebf30d5")
+# 1. Flexible Authentication Routine via Environment Variables
+# Safely pull your fresh token from the Linux environment matrix
+mast_token = os.environ.get("MAST_API_TOKEN", "").strip()
 
-# 1. Query by the JWST collection and specific Proposal/Program ID (1257)
-obs_table = Observations.query_criteria(obs_collection="JWST", proposal_id="1257")
+if not Observations.authenticated():
+    if mast_token:
+        print(f"Authenticating with environment token (Length: {len(mast_token)})...")
+        try:
+            Observations.login(token=mast_token)
+            print("Authentication Successful!")
+        except Exception as e:
+            print(f"Authentication Failed: {e}")
+            print("Attempting to proceed anonymously for public archival data...")
+    else:
+        print("No MAST_API_TOKEN detected in environment variables.")
+        print("Proceeding anonymously for public database access...")
 
-print(f"Found {len(obs_table)} observations for program 1257. Fetching all products...")
+# 2. Query by the JWST collection and specific Proposal/Program ID (1257)
+proposal_id = "1257"
+obs_table = Observations.query_criteria(obs_collection="JWST", proposal_id=proposal_id)
+print(f"Found {len(obs_table)} observations for program {proposal_id}. Fetching product metadata tree...")
 
-# 2. Get the full list of products (including auxiliary and engineering tables)
+# Get the full list of products
 products = Observations.get_product_list(obs_table)
 
-# 3. Filter down exclusively to your target pool file string
+# 3. Filter down exclusively to your target association map pool file string
 target_pool = "jw01257-o003_20260714t164831_image3_00007_asn.json"
 matching_file = products[products['productFilename'] == target_pool]
 
-# 4. Check if the file is available and download it
+# Establish and create the new target raw input workspace directory
+output_raw_dir = "./processed_stage1_raw/"
+os.makedirs(output_raw_dir, exist_ok=True)
+
+# 4. Execute the secure target download directly to your new folder path
 if len(matching_file) > 0:
-    print(f"File found! Initiating download for {target_pool}...")
-    # Make sure to check your physical label/token permissions if it is restricted data
-    Observations.download_products(matching_file)
+    print(f"\nTarget File Isolated! Initiating download for: {target_pool}")
+    print(f"Output Destination: {os.path.abspath(output_raw_dir)}")
+
+    # Overriding download_dir routes the file straight into your target path
+    manifest = Observations.download_products(matching_file, download_dir=output_raw_dir)
+    print("\nDownload complete! Manifest receipt summarized below:")
+    print(manifest)
 else:
-    print(f"Could not find {target_pool} directly. Checking alternative types...")
+    print(f"\nCould not find {target_pool} directly. Checking alternative types...")
     # Look for any association pool tables matching this program's run date
     pool_files = products[products['productFilename'].str.contains('_asn.json', na=False)]
-    print("Available association pools in this program:")
+    print("\nAvailable association pools found in this program:")
     print(pool_files['productFilename'])

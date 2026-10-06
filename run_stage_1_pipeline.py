@@ -1,64 +1,41 @@
-import json
 import os
-import numpy as np
-from astroquery.mast import Observations
+import glob
+from jwst.pipeline import Detector1Pipeline, Image2Pipeline
 
-# 1. Paths configuration
-asn_file_path = "./mastDownload/JWST/jw01257-o003_t005_nircam_f150w2-f162m/jw01257-o003_20260714t164831_image3_00002_asn.json"
-proposal_id = "1257"
+# Configure local CRDS cache routing before pipeline compilation
+os.environ["CRDS_SERVER_URL"] = "https://stsci.edu"
+os.environ["CRDS_PATH"] = os.path.expanduser("~/crds_cache")
 
-if not os.path.exists(asn_file_path):
-    raise FileNotFoundError(f"Could not locate the association JSON at {asn_file_path}")
+# FIX: Point glob directly to your new raw download repository directory
+uncal_files = glob.glob("./processed_stage1_raw/**/*_uncal.fits", recursive=True)
+print(f"Located {len(uncal_files)} raw files for pipeline processing inside ./processed_stage1_raw/")
 
-# 2. Authenticate using your active token sequence
-if not Observations.authenticated():
-    print("Session expired or unauthenticated. Re-logging in...")
-    Observations.login(token="268b72a1bcf2473fa21cea468ebf30d5")
+# Define independent structured workspaces to isolate output stages cleanly
+stage1_out_dir = "./processed_stage1_rate/"
+stage2_out_dir = "./processed_stage2_cal/"
 
-# 3. Parse the JSON file to find the member exposures
-print(f"Reading exposure map from: {asn_file_path}")
-with open(asn_file_path, "r") as f:
-    asn_data = json.load(f)
+os.makedirs(stage1_out_dir, exist_ok=True)
+os.makedirs(stage2_out_dir, exist_ok=True)
 
-# Loop through the association product matrix to collect member filenames
-target_expnames = []
-for product in asn_data.get("products", []):
-    for member in product.get("members", []):
-        expname = member.get("expname")
-        if expname:
-            # Clean up the extension if it already has .fits
-            if expname.endswith(".fits"):
-                base_name = expname.rsplit("_", 1)[0]
-            else:
-                base_name = expname
+for uncal_file in uncal_files:
+    file_basename = os.path.basename(uncal_file)
+    print(f"\n==========================================")
+    print(f"Processing Target: {file_basename}")
+    print(f"==========================================")
 
-            # Safely build the exact uncal filename string
-            uncal_filename = f"{base_name}_uncal.fits"
-            target_expnames.append(uncal_filename)
+    # 1. Run Detector Stage 1 Calibration (Outputs *_rate.fits)
+    print("--- Running Stage 1: Detector Processing ---")
+    Detector1Pipeline.call(uncal_file, output_dir=stage1_out_dir, save_results=True)
 
-# Deduplicate the list
-target_expnames = list(set(target_expnames))
-print(f"Found {len(target_expnames)} unique raw exposure members to fetch.")
+    # Dynamically map the path to look inside the Stage 1 rate folder
+    rate_basename = file_basename.replace("_uncal.fits", "_rate.fits")
+    rate_file = os.path.join(stage1_out_dir, rate_basename)
 
-# 4. Query MAST for the data product tree under Program 1257
-print(f"Querying MAST product catalog for Program {proposal_id}...")
-obs_table = Observations.query_criteria(obs_collection="JWST", proposal_id=proposal_id)
-all_products = Observations.get_product_list(obs_table)
+    # 2. Run Image Stage 2 Calibration (Outputs *_cal.fits
+    if os.path.exists(rate_file):
+        print(f"\n--- Running Stage 2: Image Processing for {rate_basename} ---")
+        Image2Pipeline.call(rate_file, output_dir=stage2_out_dir, save_results=True)
+    else:
+        print(f"ERROR: Expected rate file not found at matching path: {rate_file}")
 
-# 5. FIX: Convert the Astropy column to a NumPy array to safely check membership
-filenames_array = np.array(all_products['productFilename'])
-mask = np.isin(filenames_array, target_expnames)
-matching_products = all_products[mask]
-
-print(f"Matched {len(matching_products)} files out of {len(target_expnames)} requested members inside the archive.")
-
-# 6. Execute the secure batch download
-if len(matching_products) > 0:
-    print("\nStarting batch download of member files...")
-    manifest = Observations.download_products(matching_products)
-    print("\nAll downloads finalized successfully!")
-    print(manifest)
-else:
-    print("\nNo matching file names could be found. Here is a sample of what the script searched for:")
-    for sample in target_expnames[:3]:
-        print(f" - {sample}")
+print("\nProcessing complete! All exposures successfully converted to *_cal.fits.")
