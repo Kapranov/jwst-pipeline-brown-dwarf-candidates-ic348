@@ -24,7 +24,7 @@ else:
 if download_dir:
     os.makedirs(download_dir, exist_ok=True)
 
-mast_jwst_root = "./mastDownload/JWST/"
+mast_jwst_root = "./processed_stage1_raw/mastDownload/JWST/"
 
 # Locate the target association json file
 search_pattern = os.path.join(mast_jwst_root, "**", target_json_name)

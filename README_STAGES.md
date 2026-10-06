@@ -164,4 +164,28 @@ Processing: jw01257003001_02109_00002_nrcb1_uncal.fits
 Processing complete! All exposures converted to *_cal.fits.
 ```
 
+Quick Health-Check: Verify Downloaded File Counts:
+
+Run this simple command in your terminal loop to count exactly how many raw
+exposures (`_uncal.fits`) were delivered into each filter directory:
+
+
+```
+bash> ls -1 ./processed_stage1_raw/*/*/*/*/*_uncal.fits | wc -l
+120
+
+```
+
+Or for a detailed breakdown per filter folder, run:
+
+```
+bash> du -sh ./processed_stage1_raw/*
+1.1G    ./processed_stage1_raw/jw01257-o003_t005_nircam_f150w2-f162m
+4.1G    ./processed_stage1_raw/jw01257-o003_t005_nircam_f150w2-f164n
+513M    ./processed_stage1_raw/jw01257-o003_t005_nircam_f322w2-f323n
+513M    ./processed_stage1_raw/jw01257-o003_t005_nircam_f444w-f466n
+513M    ./processed_stage1_raw/jw01257-o003_t005_nircam_f444w-f470n
+440K    ./processed_stage1_raw/mastDownload
+```
+
 ### 6 Oct 2026 by Oleg G.Kapranov

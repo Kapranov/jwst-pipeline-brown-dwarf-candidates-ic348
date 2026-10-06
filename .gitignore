@@ -2,6 +2,8 @@
 *.fit
 *.log
 
+./processed_stage1_raw/*
+
 ./processed_stage1_raw/jw01257-o003_t005_nircam_f150w2-f162m/mastDownload/JWST/*
 ./processed_stage1_raw/jw01257-o003_t005_nircam_f150w2-f164n/mastDownload/JWST/*
 ./processed_stage1_raw/jw01257-o003_t005_nircam_f322w2-f323n/mastDownload/JWST/*
