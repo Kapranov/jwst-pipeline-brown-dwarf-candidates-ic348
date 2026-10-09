@@ -1,0 +1,1368 @@
+# Layout the project `jwst-pipeline-brown-dwarf-candidates-ic348`
+
+```
+19G  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_rate
+27G  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal
+12K  jwst-pipeline-brown-dwarf-candidates-ic348/.ipynb_checkpoints
+12K  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload/JWST/jw01257-o003_t005_nircam_f322w2-f323n
+380K jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload/JWST/jw01257003001_02101_00001_nrca1
+12K  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload/JWST/jw01257-o003_t005_nircam_f444w-f466n
+16K  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload/JWST/jw01257-o003_t005_nircam_f150w2-f162m
+12K  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload/JWST/jw01257-o003_t005_nircam_f444w-f470n
+24K  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload/JWST/jw01257-o003_t005_nircam_f150w2-f164n
+460K jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload/JWST
+464K jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw/mastDownload
+6.6G jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage1_raw
+16K  jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2
+27G  jwst-pipeline-brown-dwarf-candidates-ic348
+```
+
+```
+jwst-pipeline-brown-dwarf-candidates-ic348
+├── 00_jwst_pipeline_master_execution.ipynb
+├── 01_jwst_data_reduction_and_cataloging.py
+├── check_crds.sh
+├── check_step2.py
+├── crds_cache_layout.md
+├── download_asn_members.py
+├── download_jw01257-o003_t005_nircam_f150w2-f162m.log
+├── download_jw01257-o003_t005_nircam_f150w2-f164n.log
+├── download_jw01257-o003_t005_nircam_f322w2-f323n.log
+├── download_jw01257-o003_t005_nircam_f444w-f466n.log
+├── download_jw01257-o003_t005_nircam_f444w-f470n.log
+├── generate_master_notebook.py
+├── IMPORTANT.md
+├── inject_warning.py
+├── layout.md
+├── LICENSE
+├── list_project.md
+├── processed_stage1_rate
+│   ├── jw01257003001_02101_00001_nrca1_rate.fits
+│   ├── jw01257003001_02101_00001_nrca1_rateints.fits
+│   ├── jw01257003001_02101_00001_nrca2_rate.fits
+│   ├── jw01257003001_02101_00001_nrca2_rateints.fits
+│   ├── jw01257003001_02101_00001_nrca3_rate.fits
+│   ├── jw01257003001_02101_00001_nrca3_rateints.fits
+│   ├── jw01257003001_02101_00001_nrca4_rate.fits
+│   ├── jw01257003001_02101_00001_nrca4_rateints.fits
+│   ├── jw01257003001_02101_00001_nrcalong_rate.fits
+│   ├── jw01257003001_02101_00001_nrcalong_rateints.fits
+│   ├── jw01257003001_02101_00001_nrcb1_rate.fits
+│   ├── jw01257003001_02101_00001_nrcb1_rateints.fits
+│   ├── jw01257003001_02101_00001_nrcb2_rate.fits
+│   ├── jw01257003001_02101_00001_nrcb2_rateints.fits
+│   ├── jw01257003001_02101_00001_nrcb3_rate.fits
+│   ├── jw01257003001_02101_00001_nrcb3_rateints.fits
+│   ├── jw01257003001_02101_00001_nrcb4_rate.fits
+│   ├── jw01257003001_02101_00001_nrcb4_rateints.fits
+│   ├── jw01257003001_02101_00001_nrcblong_rate.fits
+│   ├── jw01257003001_02101_00001_nrcblong_rateints.fits
+│   ├── jw01257003001_02101_00002_nrca1_rate.fits
+│   ├── jw01257003001_02101_00002_nrca1_rateints.fits
+│   ├── jw01257003001_02101_00002_nrca2_rate.fits
+│   ├── jw01257003001_02101_00002_nrca2_rateints.fits
+│   ├── jw01257003001_02101_00002_nrca3_rate.fits
+│   ├── jw01257003001_02101_00002_nrca3_rateints.fits
+│   ├── jw01257003001_02101_00002_nrca4_rate.fits
+│   ├── jw01257003001_02101_00002_nrca4_rateints.fits
+│   ├── jw01257003001_02101_00002_nrcalong_rate.fits
+│   ├── jw01257003001_02101_00002_nrcalong_rateints.fits
+│   ├── jw01257003001_02101_00002_nrcb1_rate.fits
+│   ├── jw01257003001_02101_00002_nrcb1_rateints.fits
+│   ├── jw01257003001_02101_00002_nrcb2_rate.fits
+│   ├── jw01257003001_02101_00002_nrcb2_rateints.fits
+│   ├── jw01257003001_02101_00002_nrcb3_rate.fits
+│   ├── jw01257003001_02101_00002_nrcb3_rateints.fits
+│   ├── jw01257003001_02101_00002_nrcb4_rate.fits
+│   ├── jw01257003001_02101_00002_nrcb4_rateints.fits
+│   ├── jw01257003001_02101_00002_nrcblong_rate.fits
+│   ├── jw01257003001_02101_00002_nrcblong_rateints.fits
+│   ├── jw01257003001_02101_00003_nrca1_rate.fits
+│   ├── jw01257003001_02101_00003_nrca1_rateints.fits
+│   ├── jw01257003001_02101_00003_nrca2_rate.fits
+│   ├── jw01257003001_02101_00003_nrca2_rateints.fits
+│   ├── jw01257003001_02101_00003_nrca3_rate.fits
+│   ├── jw01257003001_02101_00003_nrca3_rateints.fits
+│   ├── jw01257003001_02101_00003_nrca4_rate.fits
+│   ├── jw01257003001_02101_00003_nrca4_rateints.fits
+│   ├── jw01257003001_02101_00003_nrcalong_rate.fits
+│   ├── jw01257003001_02101_00003_nrcalong_rateints.fits
+│   ├── jw01257003001_02101_00003_nrcb1_rate.fits
+│   ├── jw01257003001_02101_00003_nrcb1_rateints.fits
+│   ├── jw01257003001_02101_00003_nrcb2_rate.fits
+│   ├── jw01257003001_02101_00003_nrcb2_rateints.fits
+│   ├── jw01257003001_02101_00003_nrcb3_rate.fits
+│   ├── jw01257003001_02101_00003_nrcb3_rateints.fits
+│   ├── jw01257003001_02101_00003_nrcb4_rate.fits
+│   ├── jw01257003001_02101_00003_nrcb4_rateints.fits
+│   ├── jw01257003001_02101_00003_nrcblong_rate.fits
+│   ├── jw01257003001_02101_00003_nrcblong_rateints.fits
+│   ├── jw01257003001_02101_00004_nrca1_rate.fits
+│   ├── jw01257003001_02101_00004_nrca1_rateints.fits
+│   ├── jw01257003001_02101_00004_nrca2_rate.fits
+│   ├── jw01257003001_02101_00004_nrca2_rateints.fits
+│   ├── jw01257003001_02101_00004_nrca3_rate.fits
+│   ├── jw01257003001_02101_00004_nrca3_rateints.fits
+│   ├── jw01257003001_02101_00004_nrca4_rate.fits
+│   ├── jw01257003001_02101_00004_nrca4_rateints.fits
+│   ├── jw01257003001_02101_00004_nrcalong_rate.fits
+│   ├── jw01257003001_02101_00004_nrcalong_rateints.fits
+│   ├── jw01257003001_02101_00004_nrcb1_rate.fits
+│   ├── jw01257003001_02101_00004_nrcb1_rateints.fits
+│   ├── jw01257003001_02101_00004_nrcb2_rate.fits
+│   ├── jw01257003001_02101_00004_nrcb2_rateints.fits
+│   ├── jw01257003001_02101_00004_nrcb3_rate.fits
+│   ├── jw01257003001_02101_00004_nrcb3_rateints.fits
+│   ├── jw01257003001_02101_00004_nrcb4_rate.fits
+│   ├── jw01257003001_02101_00004_nrcb4_rateints.fits
+│   ├── jw01257003001_02101_00004_nrcblong_rate.fits
+│   ├── jw01257003001_02101_00004_nrcblong_rateints.fits
+│   ├── jw01257003001_02103_00001_nrca1_rate.fits
+│   ├── jw01257003001_02103_00001_nrca1_rateints.fits
+│   ├── jw01257003001_02103_00001_nrca2_rate.fits
+│   ├── jw01257003001_02103_00001_nrca2_rateints.fits
+│   ├── jw01257003001_02103_00001_nrca3_rate.fits
+│   ├── jw01257003001_02103_00001_nrca3_rateints.fits
+│   ├── jw01257003001_02103_00001_nrca4_rate.fits
+│   ├── jw01257003001_02103_00001_nrca4_rateints.fits
+│   ├── jw01257003001_02103_00001_nrcalong_rate.fits
+│   ├── jw01257003001_02103_00001_nrcalong_rateints.fits
+│   ├── jw01257003001_02103_00001_nrcb1_rate.fits
+│   ├── jw01257003001_02103_00001_nrcb1_rateints.fits
+│   ├── jw01257003001_02103_00001_nrcb2_rate.fits
+│   ├── jw01257003001_02103_00001_nrcb2_rateints.fits
+│   ├── jw01257003001_02103_00001_nrcb3_rate.fits
+│   ├── jw01257003001_02103_00001_nrcb3_rateints.fits
+│   ├── jw01257003001_02103_00001_nrcb4_rate.fits
+│   ├── jw01257003001_02103_00001_nrcb4_rateints.fits
+│   ├── jw01257003001_02103_00001_nrcblong_rate.fits
+│   ├── jw01257003001_02103_00001_nrcblong_rateints.fits
+│   ├── jw01257003001_02103_00002_nrca1_rate.fits
+│   ├── jw01257003001_02103_00002_nrca1_rateints.fits
+│   ├── jw01257003001_02103_00002_nrca2_rate.fits
+│   ├── jw01257003001_02103_00002_nrca2_rateints.fits
+│   ├── jw01257003001_02103_00002_nrca3_rate.fits
+│   ├── jw01257003001_02103_00002_nrca3_rateints.fits
+│   ├── jw01257003001_02103_00002_nrca4_rate.fits
+│   ├── jw01257003001_02103_00002_nrca4_rateints.fits
+│   ├── jw01257003001_02103_00002_nrcalong_rate.fits
+│   ├── jw01257003001_02103_00002_nrcalong_rateints.fits
+│   ├── jw01257003001_02103_00002_nrcb1_rate.fits
+│   ├── jw01257003001_02103_00002_nrcb1_rateints.fits
+│   ├── jw01257003001_02103_00002_nrcb2_rate.fits
+│   ├── jw01257003001_02103_00002_nrcb2_rateints.fits
+│   ├── jw01257003001_02103_00002_nrcb3_rate.fits
+│   ├── jw01257003001_02103_00002_nrcb3_rateints.fits
+│   ├── jw01257003001_02103_00002_nrcb4_rate.fits
+│   ├── jw01257003001_02103_00002_nrcb4_rateints.fits
+│   ├── jw01257003001_02103_00002_nrcblong_rate.fits
+│   ├── jw01257003001_02103_00002_nrcblong_rateints.fits
+│   ├── jw01257003001_02103_00003_nrca1_rate.fits
+│   ├── jw01257003001_02103_00003_nrca1_rateints.fits
+│   ├── jw01257003001_02103_00003_nrca2_rate.fits
+│   ├── jw01257003001_02103_00003_nrca2_rateints.fits
+│   ├── jw01257003001_02103_00003_nrca3_rate.fits
+│   ├── jw01257003001_02103_00003_nrca3_rateints.fits
+│   ├── jw01257003001_02103_00003_nrca4_rate.fits
+│   ├── jw01257003001_02103_00003_nrca4_rateints.fits
+│   ├── jw01257003001_02103_00003_nrcalong_rate.fits
+│   ├── jw01257003001_02103_00003_nrcalong_rateints.fits
+│   ├── jw01257003001_02103_00003_nrcb1_rate.fits
+│   ├── jw01257003001_02103_00003_nrcb1_rateints.fits
+│   ├── jw01257003001_02103_00003_nrcb2_rate.fits
+│   ├── jw01257003001_02103_00003_nrcb2_rateints.fits
+│   ├── jw01257003001_02103_00003_nrcb3_rate.fits
+│   ├── jw01257003001_02103_00003_nrcb3_rateints.fits
+│   ├── jw01257003001_02103_00003_nrcb4_rate.fits
+│   ├── jw01257003001_02103_00003_nrcb4_rateints.fits
+│   ├── jw01257003001_02103_00003_nrcblong_rate.fits
+│   ├── jw01257003001_02103_00003_nrcblong_rateints.fits
+│   ├── jw01257003001_02103_00004_nrca1_rate.fits
+│   ├── jw01257003001_02103_00004_nrca1_rateints.fits
+│   ├── jw01257003001_02103_00004_nrca2_rate.fits
+│   ├── jw01257003001_02103_00004_nrca2_rateints.fits
+│   ├── jw01257003001_02103_00004_nrca3_rate.fits
+│   ├── jw01257003001_02103_00004_nrca3_rateints.fits
+│   ├── jw01257003001_02103_00004_nrca4_rate.fits
+│   ├── jw01257003001_02103_00004_nrca4_rateints.fits
+│   ├── jw01257003001_02103_00004_nrcalong_rate.fits
+│   ├── jw01257003001_02103_00004_nrcalong_rateints.fits
+│   ├── jw01257003001_02103_00004_nrcb1_rate.fits
+│   ├── jw01257003001_02103_00004_nrcb1_rateints.fits
+│   ├── jw01257003001_02103_00004_nrcb2_rate.fits
+│   ├── jw01257003001_02103_00004_nrcb2_rateints.fits
+│   ├── jw01257003001_02103_00004_nrcb3_rate.fits
+│   ├── jw01257003001_02103_00004_nrcb3_rateints.fits
+│   ├── jw01257003001_02103_00004_nrcb4_rate.fits
+│   ├── jw01257003001_02103_00004_nrcb4_rateints.fits
+│   ├── jw01257003001_02103_00004_nrcblong_rate.fits
+│   ├── jw01257003001_02103_00004_nrcblong_rateints.fits
+│   ├── jw01257003001_02105_00001_nrcalong_rate.fits
+│   ├── jw01257003001_02105_00001_nrcalong_rateints.fits
+│   ├── jw01257003001_02105_00001_nrcblong_rate.fits
+│   ├── jw01257003001_02105_00001_nrcblong_rateints.fits
+│   ├── jw01257003001_02105_00002_nrcalong_rate.fits
+│   ├── jw01257003001_02105_00002_nrcalong_rateints.fits
+│   ├── jw01257003001_02105_00002_nrcblong_rate.fits
+│   ├── jw01257003001_02105_00002_nrcblong_rateints.fits
+│   ├── jw01257003001_02105_00003_nrcalong_rate.fits
+│   ├── jw01257003001_02105_00003_nrcalong_rateints.fits
+│   ├── jw01257003001_02105_00003_nrcblong_rate.fits
+│   ├── jw01257003001_02105_00003_nrcblong_rateints.fits
+│   ├── jw01257003001_02105_00004_nrcalong_rate.fits
+│   ├── jw01257003001_02105_00004_nrcalong_rateints.fits
+│   ├── jw01257003001_02105_00004_nrcblong_rate.fits
+│   ├── jw01257003001_02105_00004_nrcblong_rateints.fits
+│   ├── jw01257003001_02109_00001_nrca1_rate.fits
+│   ├── jw01257003001_02109_00001_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00001_nrca2_rate.fits
+│   ├── jw01257003001_02109_00001_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00001_nrca3_rate.fits
+│   ├── jw01257003001_02109_00001_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00001_nrca4_rate.fits
+│   ├── jw01257003001_02109_00001_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb1_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb4_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca1_rate.fits
+│   ├── jw01257003001_02109_00002_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca2_rate.fits
+│   ├── jw01257003001_02109_00002_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca3_rate.fits
+│   ├── jw01257003001_02109_00002_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca4_rate.fits
+│   ├── jw01257003001_02109_00002_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00002_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00002_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00002_nrcb4_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca1_rate.fits
+│   ├── jw01257003001_02109_00003_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca2_rate.fits
+│   ├── jw01257003001_02109_00003_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca3_rate.fits
+│   ├── jw01257003001_02109_00003_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca4_rate.fits
+│   ├── jw01257003001_02109_00003_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb1_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb4_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca1_rate.fits
+│   ├── jw01257003001_02109_00004_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca2_rate.fits
+│   ├── jw01257003001_02109_00004_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca3_rate.fits
+│   ├── jw01257003001_02109_00004_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca4_rate.fits
+│   ├── jw01257003001_02109_00004_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb1_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb4_rateints.fits
+│   └── README.md
+├── processed_stage1_raw
+│   ├── jw01257-o003_t005_nircam_f150w2-f162m
+│   │   └── mastDownload
+│   │       └── JWST
+│   │           ├── jw01257003001_02101_00001_nrca1
+│   │           │   └── jw01257_20260714t164831_pool.csv
+│   │           ├── jw01257003001_02109_00001_nrca1
+│   │           │   └── jw01257003001_02109_00001_nrca1_uncal.fits
+│   │           ├── jw01257003001_02109_00001_nrca2
+│   │           │   └── jw01257003001_02109_00001_nrca2_uncal.fits
+│   │           ├── jw01257003001_02109_00001_nrca3
+│   │           │   └── jw01257003001_02109_00001_nrca3_uncal.fits
+│   │           ├── jw01257003001_02109_00001_nrca4
+│   │           │   └── jw01257003001_02109_00001_nrca4_uncal.fits
+│   │           ├── jw01257003001_02109_00001_nrcb1
+│   │           │   └── jw01257003001_02109_00001_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02109_00001_nrcb2
+│   │           │   └── jw01257003001_02109_00001_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02109_00001_nrcb3
+│   │           │   └── jw01257003001_02109_00001_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02109_00001_nrcb4
+│   │           │   └── jw01257003001_02109_00001_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrca1
+│   │           │   └── jw01257003001_02109_00002_nrca1_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrca2
+│   │           │   └── jw01257003001_02109_00002_nrca2_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrca3
+│   │           │   └── jw01257003001_02109_00002_nrca3_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrca4
+│   │           │   └── jw01257003001_02109_00002_nrca4_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrcb1
+│   │           │   └── jw01257003001_02109_00002_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrcb2
+│   │           │   └── jw01257003001_02109_00002_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrcb3
+│   │           │   └── jw01257003001_02109_00002_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02109_00002_nrcb4
+│   │           │   └── jw01257003001_02109_00002_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrca1
+│   │           │   └── jw01257003001_02109_00003_nrca1_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrca2
+│   │           │   └── jw01257003001_02109_00003_nrca2_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrca3
+│   │           │   └── jw01257003001_02109_00003_nrca3_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrca4
+│   │           │   └── jw01257003001_02109_00003_nrca4_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrcb1
+│   │           │   └── jw01257003001_02109_00003_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrcb2
+│   │           │   └── jw01257003001_02109_00003_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrcb3
+│   │           │   └── jw01257003001_02109_00003_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02109_00003_nrcb4
+│   │           │   └── jw01257003001_02109_00003_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02109_00004_nrca1
+│   │           │   └── jw01257003001_02109_00004_nrca1_uncal.fits
+│   │           ├── jw01257003001_02109_00004_nrca2
+│   │           │   └── jw01257003001_02109_00004_nrca2_uncal.fits
+│   │           ├── jw01257003001_02109_00004_nrca3
+│   │           │   └── jw01257003001_02109_00004_nrca3_uncal.fits
+│   │           ├── jw01257003001_02109_00004_nrca4
+│   │           │   └── jw01257003001_02109_00004_nrca4_uncal.fits
+│   │           ├── jw01257003001_02109_00004_nrcb1
+│   │           │   └── jw01257003001_02109_00004_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02109_00004_nrcb2
+│   │           │   └── jw01257003001_02109_00004_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02109_00004_nrcb3
+│   │           │   └── jw01257003001_02109_00004_nrcb3_uncal.fits
+│   │           └── jw01257003001_02109_00004_nrcb4
+│   │               └── jw01257003001_02109_00004_nrcb4_uncal.fits
+│   ├── jw01257-o003_t005_nircam_f150w2-f164n
+│   │   └── mastDownload
+│   │       └── JWST
+│   │           ├── jw01257003001_02101_00001_nrca1
+│   │           │   └── jw01257003001_02101_00001_nrca1_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrca2
+│   │           │   └── jw01257003001_02101_00001_nrca2_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrca3
+│   │           │   └── jw01257003001_02101_00001_nrca3_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrca4
+│   │           │   └── jw01257003001_02101_00001_nrca4_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrcb1
+│   │           │   └── jw01257003001_02101_00001_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrcb2
+│   │           │   └── jw01257003001_02101_00001_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrcb3
+│   │           │   └── jw01257003001_02101_00001_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrcb4
+│   │           │   └── jw01257003001_02101_00001_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrca1
+│   │           │   └── jw01257003001_02101_00002_nrca1_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrca2
+│   │           │   └── jw01257003001_02101_00002_nrca2_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrca3
+│   │           │   └── jw01257003001_02101_00002_nrca3_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrca4
+│   │           │   └── jw01257003001_02101_00002_nrca4_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrcb1
+│   │           │   └── jw01257003001_02101_00002_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrcb2
+│   │           │   └── jw01257003001_02101_00002_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrcb3
+│   │           │   └── jw01257003001_02101_00002_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrcb4
+│   │           │   └── jw01257003001_02101_00002_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrca1
+│   │           │   └── jw01257003001_02101_00003_nrca1_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrca2
+│   │           │   └── jw01257003001_02101_00003_nrca2_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrca3
+│   │           │   └── jw01257003001_02101_00003_nrca3_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrca4
+│   │           │   └── jw01257003001_02101_00003_nrca4_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrcb1
+│   │           │   └── jw01257003001_02101_00003_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrcb2
+│   │           │   └── jw01257003001_02101_00003_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrcb3
+│   │           │   └── jw01257003001_02101_00003_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrcb4
+│   │           │   └── jw01257003001_02101_00003_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrca1
+│   │           │   └── jw01257003001_02101_00004_nrca1_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrca2
+│   │           │   └── jw01257003001_02101_00004_nrca2_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrca3
+│   │           │   └── jw01257003001_02101_00004_nrca3_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrca4
+│   │           │   └── jw01257003001_02101_00004_nrca4_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrcb1
+│   │           │   └── jw01257003001_02101_00004_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrcb2
+│   │           │   └── jw01257003001_02101_00004_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrcb3
+│   │           │   └── jw01257003001_02101_00004_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrcb4
+│   │           │   └── jw01257003001_02101_00004_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrca1
+│   │           │   └── jw01257003001_02103_00001_nrca1_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrca2
+│   │           │   └── jw01257003001_02103_00001_nrca2_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrca3
+│   │           │   └── jw01257003001_02103_00001_nrca3_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrca4
+│   │           │   └── jw01257003001_02103_00001_nrca4_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrcb1
+│   │           │   └── jw01257003001_02103_00001_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrcb2
+│   │           │   └── jw01257003001_02103_00001_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrcb3
+│   │           │   └── jw01257003001_02103_00001_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrcb4
+│   │           │   └── jw01257003001_02103_00001_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrca1
+│   │           │   └── jw01257003001_02103_00002_nrca1_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrca2
+│   │           │   └── jw01257003001_02103_00002_nrca2_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrca3
+│   │           │   └── jw01257003001_02103_00002_nrca3_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrca4
+│   │           │   └── jw01257003001_02103_00002_nrca4_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrcb1
+│   │           │   └── jw01257003001_02103_00002_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrcb2
+│   │           │   └── jw01257003001_02103_00002_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrcb3
+│   │           │   └── jw01257003001_02103_00002_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrcb4
+│   │           │   └── jw01257003001_02103_00002_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrca1
+│   │           │   └── jw01257003001_02103_00003_nrca1_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrca2
+│   │           │   └── jw01257003001_02103_00003_nrca2_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrca3
+│   │           │   └── jw01257003001_02103_00003_nrca3_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrca4
+│   │           │   └── jw01257003001_02103_00003_nrca4_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrcb1
+│   │           │   └── jw01257003001_02103_00003_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrcb2
+│   │           │   └── jw01257003001_02103_00003_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrcb3
+│   │           │   └── jw01257003001_02103_00003_nrcb3_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrcb4
+│   │           │   └── jw01257003001_02103_00003_nrcb4_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrca1
+│   │           │   └── jw01257003001_02103_00004_nrca1_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrca2
+│   │           │   └── jw01257003001_02103_00004_nrca2_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrca3
+│   │           │   └── jw01257003001_02103_00004_nrca3_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrca4
+│   │           │   └── jw01257003001_02103_00004_nrca4_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrcb1
+│   │           │   └── jw01257003001_02103_00004_nrcb1_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrcb2
+│   │           │   └── jw01257003001_02103_00004_nrcb2_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrcb3
+│   │           │   └── jw01257003001_02103_00004_nrcb3_uncal.fits
+│   │           └── jw01257003001_02103_00004_nrcb4
+│   │               └── jw01257003001_02103_00004_nrcb4_uncal.fits
+│   ├── jw01257-o003_t005_nircam_f322w2-f323n
+│   │   └── mastDownload
+│   │       └── JWST
+│   │           ├── jw01257003001_02105_00001_nrcalong
+│   │           │   └── jw01257003001_02105_00001_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02105_00001_nrcblong
+│   │           │   └── jw01257003001_02105_00001_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02105_00002_nrcalong
+│   │           │   └── jw01257003001_02105_00002_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02105_00002_nrcblong
+│   │           │   └── jw01257003001_02105_00002_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02105_00003_nrcalong
+│   │           │   └── jw01257003001_02105_00003_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02105_00003_nrcblong
+│   │           │   └── jw01257003001_02105_00003_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02105_00004_nrcalong
+│   │           │   └── jw01257003001_02105_00004_nrcalong_uncal.fits
+│   │           └── jw01257003001_02105_00004_nrcblong
+│   │               └── jw01257003001_02105_00004_nrcblong_uncal.fits
+│   ├── jw01257-o003_t005_nircam_f444w-f466n
+│   │   └── mastDownload
+│   │       └── JWST
+│   │           ├── jw01257003001_02101_00001_nrcalong
+│   │           │   └── jw01257003001_02101_00001_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02101_00001_nrcblong
+│   │           │   └── jw01257003001_02101_00001_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrcalong
+│   │           │   └── jw01257003001_02101_00002_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02101_00002_nrcblong
+│   │           │   └── jw01257003001_02101_00002_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrcalong
+│   │           │   └── jw01257003001_02101_00003_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02101_00003_nrcblong
+│   │           │   └── jw01257003001_02101_00003_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02101_00004_nrcalong
+│   │           │   └── jw01257003001_02101_00004_nrcalong_uncal.fits
+│   │           └── jw01257003001_02101_00004_nrcblong
+│   │               └── jw01257003001_02101_00004_nrcblong_uncal.fits
+│   ├── jw01257-o003_t005_nircam_f444w-f470n
+│   │   └── mastDownload
+│   │       └── JWST
+│   │           ├── jw01257003001_02103_00001_nrcalong
+│   │           │   └── jw01257003001_02103_00001_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02103_00001_nrcblong
+│   │           │   └── jw01257003001_02103_00001_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrcalong
+│   │           │   └── jw01257003001_02103_00002_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02103_00002_nrcblong
+│   │           │   └── jw01257003001_02103_00002_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrcalong
+│   │           │   └── jw01257003001_02103_00003_nrcalong_uncal.fits
+│   │           ├── jw01257003001_02103_00003_nrcblong
+│   │           │   └── jw01257003001_02103_00003_nrcblong_uncal.fits
+│   │           ├── jw01257003001_02103_00004_nrcalong
+│   │           │   └── jw01257003001_02103_00004_nrcalong_uncal.fits
+│   │           └── jw01257003001_02103_00004_nrcblong
+│   │               └── jw01257003001_02103_00004_nrcblong_uncal.fits
+│   └── mastDownload
+│       └── JWST
+│           ├── jw01257003001_02101_00001_nrca1
+│           │   └── jw01257_20260714t164831_pool.csv
+│           ├── jw01257-o003_t005_nircam_f150w2-f162m
+│           │   └── jw01257-o003_20260714t164831_image3_00002_asn.json
+│           ├── jw01257-o003_t005_nircam_f150w2-f164n
+│           │   └── jw01257-o003_20260714t164831_image3_00009_asn.json
+│           ├── jw01257-o003_t005_nircam_f322w2-f323n
+│           │   └── jw01257-o003_20260714t164831_image3_00005_asn.json
+│           ├── jw01257-o003_t005_nircam_f444w-f466n
+│           │   └── jw01257-o003_20260714t164831_image3_00008_asn.json
+│           └── jw01257-o003_t005_nircam_f444w-f470n
+│               └── jw01257-o003_20260714t164831_image3_00007_asn.json
+├── processed_stage2
+│   ├── jw01257003001_02109_00001_nrca1_cal.fits
+│   ├── jw01257003001_02109_00001_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca1_rate.fits
+│   ├── jw01257003001_02109_00001_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00001_nrca2_cal.fits
+│   ├── jw01257003001_02109_00001_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca2_rate.fits
+│   ├── jw01257003001_02109_00001_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00001_nrca3_cal.fits
+│   ├── jw01257003001_02109_00001_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca3_rate.fits
+│   ├── jw01257003001_02109_00001_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00001_nrca4_cal.fits
+│   ├── jw01257003001_02109_00001_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca4_rate.fits
+│   ├── jw01257003001_02109_00001_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb1_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00001_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb4_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00001_nrcb4_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca1_cal.fits
+│   ├── jw01257003001_02109_00002_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca1_rate.fits
+│   ├── jw01257003001_02109_00002_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca2_cal.fits
+│   ├── jw01257003001_02109_00002_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca2_rate.fits
+│   ├── jw01257003001_02109_00002_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca3_cal.fits
+│   ├── jw01257003001_02109_00002_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca3_rate.fits
+│   ├── jw01257003001_02109_00002_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00002_nrca4_cal.fits
+│   ├── jw01257003001_02109_00002_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca4_rate.fits
+│   ├── jw01257003001_02109_00002_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb1_rate.fits
+│   ├── jw01257003001_02109_00002_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00002_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00002_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00002_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb4_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00002_nrcb4_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca1_cal.fits
+│   ├── jw01257003001_02109_00003_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca1_rate.fits
+│   ├── jw01257003001_02109_00003_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca2_cal.fits
+│   ├── jw01257003001_02109_00003_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca2_rate.fits
+│   ├── jw01257003001_02109_00003_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca3_cal.fits
+│   ├── jw01257003001_02109_00003_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca3_rate.fits
+│   ├── jw01257003001_02109_00003_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00003_nrca4_cal.fits
+│   ├── jw01257003001_02109_00003_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca4_rate.fits
+│   ├── jw01257003001_02109_00003_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb1_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00003_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb4_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00003_nrcb4_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca1_cal.fits
+│   ├── jw01257003001_02109_00004_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca1_rate.fits
+│   ├── jw01257003001_02109_00004_nrca1_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca2_cal.fits
+│   ├── jw01257003001_02109_00004_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca2_rate.fits
+│   ├── jw01257003001_02109_00004_nrca2_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca3_cal.fits
+│   ├── jw01257003001_02109_00004_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca3_rate.fits
+│   ├── jw01257003001_02109_00004_nrca3_rateints.fits
+│   ├── jw01257003001_02109_00004_nrca4_cal.fits
+│   ├── jw01257003001_02109_00004_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca4_rate.fits
+│   ├── jw01257003001_02109_00004_nrca4_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb1_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb1_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb2_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb2_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb3_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb3_rateints.fits
+│   ├── jw01257003001_02109_00004_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb4_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb4_rate.fits
+│   ├── jw01257003001_02109_00004_nrcb4_rateints.fits
+│   └── README.md
+├── processed_stage2_cal
+│   ├── jw01257003001_02101_00001_nrca1_cal.fits
+│   ├── jw01257003001_02101_00001_nrca1_i2d.fits
+│   ├── jw01257003001_02101_00001_nrca2_cal.fits
+│   ├── jw01257003001_02101_00001_nrca2_i2d.fits
+│   ├── jw01257003001_02101_00001_nrca3_cal.fits
+│   ├── jw01257003001_02101_00001_nrca3_i2d.fits
+│   ├── jw01257003001_02101_00001_nrca4_cal.fits
+│   ├── jw01257003001_02101_00001_nrca4_i2d.fits
+│   ├── jw01257003001_02101_00001_nrcalong_cal.fits
+│   ├── jw01257003001_02101_00001_nrcalong_i2d.fits
+│   ├── jw01257003001_02101_00001_nrcb1_cal.fits
+│   ├── jw01257003001_02101_00001_nrcb1_i2d.fits
+│   ├── jw01257003001_02101_00001_nrcb2_cal.fits
+│   ├── jw01257003001_02101_00001_nrcb2_i2d.fits
+│   ├── jw01257003001_02101_00001_nrcb3_cal.fits
+│   ├── jw01257003001_02101_00001_nrcb3_i2d.fits
+│   ├── jw01257003001_02101_00001_nrcb4_cal.fits
+│   ├── jw01257003001_02101_00001_nrcb4_i2d.fits
+│   ├── jw01257003001_02101_00001_nrcblong_cal.fits
+│   ├── jw01257003001_02101_00001_nrcblong_i2d.fits
+│   ├── jw01257003001_02101_00002_nrca1_cal.fits
+│   ├── jw01257003001_02101_00002_nrca1_i2d.fits
+│   ├── jw01257003001_02101_00002_nrca2_cal.fits
+│   ├── jw01257003001_02101_00002_nrca2_i2d.fits
+│   ├── jw01257003001_02101_00002_nrca3_cal.fits
+│   ├── jw01257003001_02101_00002_nrca3_i2d.fits
+│   ├── jw01257003001_02101_00002_nrca4_cal.fits
+│   ├── jw01257003001_02101_00002_nrca4_i2d.fits
+│   ├── jw01257003001_02101_00002_nrcalong_cal.fits
+│   ├── jw01257003001_02101_00002_nrcalong_i2d.fits
+│   ├── jw01257003001_02101_00002_nrcb1_cal.fits
+│   ├── jw01257003001_02101_00002_nrcb1_i2d.fits
+│   ├── jw01257003001_02101_00002_nrcb2_cal.fits
+│   ├── jw01257003001_02101_00002_nrcb2_i2d.fits
+│   ├── jw01257003001_02101_00002_nrcb3_cal.fits
+│   ├── jw01257003001_02101_00002_nrcb3_i2d.fits
+│   ├── jw01257003001_02101_00002_nrcb4_cal.fits
+│   ├── jw01257003001_02101_00002_nrcb4_i2d.fits
+│   ├── jw01257003001_02101_00002_nrcblong_cal.fits
+│   ├── jw01257003001_02101_00002_nrcblong_i2d.fits
+│   ├── jw01257003001_02101_00003_nrca1_cal.fits
+│   ├── jw01257003001_02101_00003_nrca1_i2d.fits
+│   ├── jw01257003001_02101_00003_nrca2_cal.fits
+│   ├── jw01257003001_02101_00003_nrca2_i2d.fits
+│   ├── jw01257003001_02101_00003_nrca3_cal.fits
+│   ├── jw01257003001_02101_00003_nrca3_i2d.fits
+│   ├── jw01257003001_02101_00003_nrca4_cal.fits
+│   ├── jw01257003001_02101_00003_nrca4_i2d.fits
+│   ├── jw01257003001_02101_00003_nrcalong_cal.fits
+│   ├── jw01257003001_02101_00003_nrcalong_i2d.fits
+│   ├── jw01257003001_02101_00003_nrcb1_cal.fits
+│   ├── jw01257003001_02101_00003_nrcb1_i2d.fits
+│   ├── jw01257003001_02101_00003_nrcb2_cal.fits
+│   ├── jw01257003001_02101_00003_nrcb2_i2d.fits
+│   ├── jw01257003001_02101_00003_nrcb3_cal.fits
+│   ├── jw01257003001_02101_00003_nrcb3_i2d.fits
+│   ├── jw01257003001_02101_00003_nrcb4_cal.fits
+│   ├── jw01257003001_02101_00003_nrcb4_i2d.fits
+│   ├── jw01257003001_02101_00003_nrcblong_cal.fits
+│   ├── jw01257003001_02101_00003_nrcblong_i2d.fits
+│   ├── jw01257003001_02101_00004_nrca1_cal.fits
+│   ├── jw01257003001_02101_00004_nrca1_i2d.fits
+│   ├── jw01257003001_02101_00004_nrca2_cal.fits
+│   ├── jw01257003001_02101_00004_nrca2_i2d.fits
+│   ├── jw01257003001_02101_00004_nrca3_cal.fits
+│   ├── jw01257003001_02101_00004_nrca3_i2d.fits
+│   ├── jw01257003001_02101_00004_nrca4_cal.fits
+│   ├── jw01257003001_02101_00004_nrca4_i2d.fits
+│   ├── jw01257003001_02101_00004_nrcalong_cal.fits
+│   ├── jw01257003001_02101_00004_nrcalong_i2d.fits
+│   ├── jw01257003001_02101_00004_nrcb1_cal.fits
+│   ├── jw01257003001_02101_00004_nrcb1_i2d.fits
+│   ├── jw01257003001_02101_00004_nrcb2_cal.fits
+│   ├── jw01257003001_02101_00004_nrcb2_i2d.fits
+│   ├── jw01257003001_02101_00004_nrcb3_cal.fits
+│   ├── jw01257003001_02101_00004_nrcb3_i2d.fits
+│   ├── jw01257003001_02101_00004_nrcb4_cal.fits
+│   ├── jw01257003001_02101_00004_nrcb4_i2d.fits
+│   ├── jw01257003001_02101_00004_nrcblong_cal.fits
+│   ├── jw01257003001_02101_00004_nrcblong_i2d.fits
+│   ├── jw01257003001_02103_00001_nrca1_cal.fits
+│   ├── jw01257003001_02103_00001_nrca1_i2d.fits
+│   ├── jw01257003001_02103_00001_nrca2_cal.fits
+│   ├── jw01257003001_02103_00001_nrca2_i2d.fits
+│   ├── jw01257003001_02103_00001_nrca3_cal.fits
+│   ├── jw01257003001_02103_00001_nrca3_i2d.fits
+│   ├── jw01257003001_02103_00001_nrca4_cal.fits
+│   ├── jw01257003001_02103_00001_nrca4_i2d.fits
+│   ├── jw01257003001_02103_00001_nrcalong_cal.fits
+│   ├── jw01257003001_02103_00001_nrcalong_i2d.fits
+│   ├── jw01257003001_02103_00001_nrcb1_cal.fits
+│   ├── jw01257003001_02103_00001_nrcb1_i2d.fits
+│   ├── jw01257003001_02103_00001_nrcb2_cal.fits
+│   ├── jw01257003001_02103_00001_nrcb2_i2d.fits
+│   ├── jw01257003001_02103_00001_nrcb3_cal.fits
+│   ├── jw01257003001_02103_00001_nrcb3_i2d.fits
+│   ├── jw01257003001_02103_00001_nrcb4_cal.fits
+│   ├── jw01257003001_02103_00001_nrcb4_i2d.fits
+│   ├── jw01257003001_02103_00001_nrcblong_cal.fits
+│   ├── jw01257003001_02103_00001_nrcblong_i2d.fits
+│   ├── jw01257003001_02103_00002_nrca1_cal.fits
+│   ├── jw01257003001_02103_00002_nrca1_i2d.fits
+│   ├── jw01257003001_02103_00002_nrca2_cal.fits
+│   ├── jw01257003001_02103_00002_nrca2_i2d.fits
+│   ├── jw01257003001_02103_00002_nrca3_cal.fits
+│   ├── jw01257003001_02103_00002_nrca3_i2d.fits
+│   ├── jw01257003001_02103_00002_nrca4_cal.fits
+│   ├── jw01257003001_02103_00002_nrca4_i2d.fits
+│   ├── jw01257003001_02103_00002_nrcalong_cal.fits
+│   ├── jw01257003001_02103_00002_nrcalong_i2d.fits
+│   ├── jw01257003001_02103_00002_nrcb1_cal.fits
+│   ├── jw01257003001_02103_00002_nrcb1_i2d.fits
+│   ├── jw01257003001_02103_00002_nrcb2_cal.fits
+│   ├── jw01257003001_02103_00002_nrcb2_i2d.fits
+│   ├── jw01257003001_02103_00002_nrcb3_cal.fits
+│   ├── jw01257003001_02103_00002_nrcb3_i2d.fits
+│   ├── jw01257003001_02103_00002_nrcb4_cal.fits
+│   ├── jw01257003001_02103_00002_nrcb4_i2d.fits
+│   ├── jw01257003001_02103_00002_nrcblong_cal.fits
+│   ├── jw01257003001_02103_00002_nrcblong_i2d.fits
+│   ├── jw01257003001_02103_00003_nrca1_cal.fits
+│   ├── jw01257003001_02103_00003_nrca1_i2d.fits
+│   ├── jw01257003001_02103_00003_nrca2_cal.fits
+│   ├── jw01257003001_02103_00003_nrca2_i2d.fits
+│   ├── jw01257003001_02103_00003_nrca3_cal.fits
+│   ├── jw01257003001_02103_00003_nrca3_i2d.fits
+│   ├── jw01257003001_02103_00003_nrca4_cal.fits
+│   ├── jw01257003001_02103_00003_nrca4_i2d.fits
+│   ├── jw01257003001_02103_00003_nrcalong_cal.fits
+│   ├── jw01257003001_02103_00003_nrcalong_i2d.fits
+│   ├── jw01257003001_02103_00003_nrcb1_cal.fits
+│   ├── jw01257003001_02103_00003_nrcb1_i2d.fits
+│   ├── jw01257003001_02103_00003_nrcb2_cal.fits
+│   ├── jw01257003001_02103_00003_nrcb2_i2d.fits
+│   ├── jw01257003001_02103_00003_nrcb3_cal.fits
+│   ├── jw01257003001_02103_00003_nrcb3_i2d.fits
+│   ├── jw01257003001_02103_00003_nrcb4_cal.fits
+│   ├── jw01257003001_02103_00003_nrcb4_i2d.fits
+│   ├── jw01257003001_02103_00003_nrcblong_cal.fits
+│   ├── jw01257003001_02103_00003_nrcblong_i2d.fits
+│   ├── jw01257003001_02103_00004_nrca1_cal.fits
+│   ├── jw01257003001_02103_00004_nrca1_i2d.fits
+│   ├── jw01257003001_02103_00004_nrca2_cal.fits
+│   ├── jw01257003001_02103_00004_nrca2_i2d.fits
+│   ├── jw01257003001_02103_00004_nrca3_cal.fits
+│   ├── jw01257003001_02103_00004_nrca3_i2d.fits
+│   ├── jw01257003001_02103_00004_nrca4_cal.fits
+│   ├── jw01257003001_02103_00004_nrca4_i2d.fits
+│   ├── jw01257003001_02103_00004_nrcalong_cal.fits
+│   ├── jw01257003001_02103_00004_nrcalong_i2d.fits
+│   ├── jw01257003001_02103_00004_nrcb1_cal.fits
+│   ├── jw01257003001_02103_00004_nrcb1_i2d.fits
+│   ├── jw01257003001_02103_00004_nrcb2_cal.fits
+│   ├── jw01257003001_02103_00004_nrcb2_i2d.fits
+│   ├── jw01257003001_02103_00004_nrcb3_cal.fits
+│   ├── jw01257003001_02103_00004_nrcb3_i2d.fits
+│   ├── jw01257003001_02103_00004_nrcb4_cal.fits
+│   ├── jw01257003001_02103_00004_nrcb4_i2d.fits
+│   ├── jw01257003001_02103_00004_nrcblong_cal.fits
+│   ├── jw01257003001_02103_00004_nrcblong_i2d.fits
+│   ├── jw01257003001_02105_00001_nrcalong_cal.fits
+│   ├── jw01257003001_02105_00001_nrcalong_i2d.fits
+│   ├── jw01257003001_02105_00001_nrcblong_cal.fits
+│   ├── jw01257003001_02105_00001_nrcblong_i2d.fits
+│   ├── jw01257003001_02105_00002_nrcalong_cal.fits
+│   ├── jw01257003001_02105_00002_nrcalong_i2d.fits
+│   ├── jw01257003001_02105_00002_nrcblong_cal.fits
+│   ├── jw01257003001_02105_00002_nrcblong_i2d.fits
+│   ├── jw01257003001_02105_00003_nrcalong_cal.fits
+│   ├── jw01257003001_02105_00003_nrcalong_i2d.fits
+│   ├── jw01257003001_02105_00003_nrcblong_cal.fits
+│   ├── jw01257003001_02105_00003_nrcblong_i2d.fits
+│   ├── jw01257003001_02105_00004_nrcalong_cal.fits
+│   ├── jw01257003001_02105_00004_nrcalong_i2d.fits
+│   ├── jw01257003001_02105_00004_nrcblong_cal.fits
+│   ├── jw01257003001_02105_00004_nrcblong_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca1_cal.fits
+│   ├── jw01257003001_02109_00001_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca2_cal.fits
+│   ├── jw01257003001_02109_00001_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca3_cal.fits
+│   ├── jw01257003001_02109_00001_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00001_nrca4_cal.fits
+│   ├── jw01257003001_02109_00001_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00001_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00001_nrcb4_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca1_cal.fits
+│   ├── jw01257003001_02109_00002_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca2_cal.fits
+│   ├── jw01257003001_02109_00002_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca3_cal.fits
+│   ├── jw01257003001_02109_00002_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00002_nrca4_cal.fits
+│   ├── jw01257003001_02109_00002_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00002_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00002_nrcb4_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca1_cal.fits
+│   ├── jw01257003001_02109_00003_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca2_cal.fits
+│   ├── jw01257003001_02109_00003_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca3_cal.fits
+│   ├── jw01257003001_02109_00003_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00003_nrca4_cal.fits
+│   ├── jw01257003001_02109_00003_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00003_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00003_nrcb4_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca1_cal.fits
+│   ├── jw01257003001_02109_00004_nrca1_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca2_cal.fits
+│   ├── jw01257003001_02109_00004_nrca2_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca3_cal.fits
+│   ├── jw01257003001_02109_00004_nrca3_i2d.fits
+│   ├── jw01257003001_02109_00004_nrca4_cal.fits
+│   ├── jw01257003001_02109_00004_nrca4_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb1_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb1_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb2_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb2_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb3_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb3_i2d.fits
+│   ├── jw01257003001_02109_00004_nrcb4_cal.fits
+│   ├── jw01257003001_02109_00004_nrcb4_i2d.fits
+│   └── README.md
+├── README.md
+├── README_STAGES.md
+├── requirements.txt
+├── run_batch_download.sh
+├── run_jwst_pipeline.py
+├── run_sequential_pipeline_with_cleanup.py
+├── run_parallel_download.sh
+├── run_stage_1_pipeline.py
+├── run_stage_2_pipeline.py
+├── search_jw01257-o003_20260714t164831_00002.py
+├── search_jw01257-o003_20260714t164831_00005.py
+├── search_jw01257-o003_20260714t164831_00007.py
+├── search_jw01257-o003_20260714t164831_00008.py
+├── search_jw01257-o003_20260714t164831_00009.py
+├── search_jw01257-o003_20260714t164831.py
+├── sort_exposures.py
+├── verify_stage5_f162m.py
+├── verify_stage5_f164n.py
+├── verify_stage5_f323n.py
+├── verify_stage5_f466n.py
+└── verify_stage5_f470n.py
+
+145 directories, 647 files
+```
+
+```
+bash> du -h $HOME/crds_cache/
+1.4M    ~/crds_cache/mappings/jwst
+1.4M    ~/crds_cache/mappings
+1.4M    ~/crds_cache/config/jwst
+1.4M    ~/crds_cache/config
+4.0K    ~/crds_cache/references/jwst/nirspec
+4.0K    ~/crds_cache/references/jwst/niriss
+4.0K    ~/crds_cache/references/jwst/fgs
+4.0K    ~/crds_cache/references/jwst/system
+60G     ~/crds_cache/references/jwst/nircam
+4.0K    ~/crds_cache/references/jwst/miri
+60G     ~/crds_cache/references/jwst
+60G     ~/crds_cache/references
+60G     ~/crds_cache/
+```
+
+
+```
+~/crds_cache/
+├── config
+│   └── jwst
+│       ├── bad_files.txt
+│       ├── ref_cache_subdir_mode
+│       └── server_config
+├── mappings
+│   └── jwst
+│       ├── jwst_1584.pmap
+│       ├── jwst_fgs_0126.imap
+│       ├── jwst_fgs_abvegaoffset_0002.rmap
+│       ├── jwst_fgs_apcorr_0004.rmap
+│       ├── jwst_fgs_area_0010.rmap
+│       ├── jwst_fgs_dark_0017.rmap
+│       ├── jwst_fgs_distortion_0011.rmap
+│       ├── jwst_fgs_flat_0009.rmap
+│       ├── jwst_fgs_gain_0010.rmap
+│       ├── jwst_fgs_ipc_0003.rmap
+│       ├── jwst_fgs_linearity_0015.rmap
+│       ├── jwst_fgs_mask_0023.rmap
+│       ├── jwst_fgs_pars-darkpipeline_0002.rmap
+│       ├── jwst_fgs_pars-detector1pipeline_0002.rmap
+│       ├── jwst_fgs_pars-image2pipeline_0005.rmap
+│       ├── jwst_fgs_pars-outlierdetectionstep_0001.rmap
+│       ├── jwst_fgs_pars-sourcecatalogstep_0001.rmap
+│       ├── jwst_fgs_pars-tweakregstep_0002.rmap
+│       ├── jwst_fgs_persat_0006.rmap
+│       ├── jwst_fgs_photom_0014.rmap
+│       ├── jwst_fgs_readnoise_0014.rmap
+│       ├── jwst_fgs_saturation_0009.rmap
+│       ├── jwst_fgs_superbias_0017.rmap
+│       ├── jwst_fgs_trapdensity_0006.rmap
+│       ├── jwst_fgs_trappars_0004.rmap
+│       ├── jwst_miri_0517.imap
+│       ├── jwst_miri_abvegaoffset_0003.rmap
+│       ├── jwst_miri_apcorr_0024.rmap
+│       ├── jwst_miri_area_0015.rmap
+│       ├── jwst_miri_bkg_0006.rmap
+│       ├── jwst_miri_cubepar_0017.rmap
+│       ├── jwst_miri_dark_0043.rmap
+│       ├── jwst_miri_distortion_0043.rmap
+│       ├── jwst_miri_drizpars_0002.rmap
+│       ├── jwst_miri_emicorr_0007.rmap
+│       ├── jwst_miri_extract1d_0022.rmap
+│       ├── jwst_miri_filteroffset_0029.rmap
+│       ├── jwst_miri_flat_0079.rmap
+│       ├── jwst_miri_fringe_0019.rmap
+│       ├── jwst_miri_fringefreq_0003.rmap
+│       ├── jwst_miri_gain_0013.rmap
+│       ├── jwst_miri_ipc_0008.rmap
+│       ├── jwst_miri_linearity_0018.rmap
+│       ├── jwst_miri_mask_0037.rmap
+│       ├── jwst_miri_mrsptcorr_0005.rmap
+│       ├── jwst_miri_mrsxartcorr_0002.rmap
+│       ├── jwst_miri_pars-adaptivetracemodelstep_0002.rmap
+│       ├── jwst_miri_pars-backgroundstep_0003.rmap
+│       ├── jwst_miri_pars-darkcurrentstep_0002.rmap
+│       ├── jwst_miri_pars-darkpipeline_0002.rmap
+│       ├── jwst_miri_pars-detector1pipeline_0012.rmap
+│       ├── jwst_miri_pars-emicorrstep_0003.rmap
+│       ├── jwst_miri_pars-extract1dstep_0003.rmap
+│       ├── jwst_miri_pars-image2pipeline_0010.rmap
+│       ├── jwst_miri_pars-jumpstep_0011.rmap
+│       ├── jwst_miri_pars-outlierdetectionstep_0020.rmap
+│       ├── jwst_miri_pars-resamplespecstep_0002.rmap
+│       ├── jwst_miri_pars-resamplestep_0002.rmap
+│       ├── jwst_miri_pars-sourcecatalogstep_0004.rmap
+│       ├── jwst_miri_pars-spec2pipeline_0015.rmap
+│       ├── jwst_miri_pars-spec3pipeline_0011.rmap
+│       ├── jwst_miri_pars-tsophotometrystep_0003.rmap
+│       ├── jwst_miri_pars-tweakregstep_0003.rmap
+│       ├── jwst_miri_pars-wfsscontamstep_0001.rmap
+│       ├── jwst_miri_pars-whitelightstep_0003.rmap
+│       ├── jwst_miri_pathloss_0006.rmap
+│       ├── jwst_miri_photom_0068.rmap
+│       ├── jwst_miri_psf_0008.rmap
+│       ├── jwst_miri_psfmask_0009.rmap
+│       ├── jwst_miri_readnoise_0026.rmap
+│       ├── jwst_miri_regions_0036.rmap
+│       ├── jwst_miri_reset_0027.rmap
+│       ├── jwst_miri_resol_0006.rmap
+│       ├── jwst_miri_rscd_0012.rmap
+│       ├── jwst_miri_saturation_0015.rmap
+│       ├── jwst_miri_specwcs_0051.rmap
+│       ├── jwst_miri_straymask_0009.rmap
+│       ├── jwst_miri_tsophot_0004.rmap
+│       ├── jwst_miri_wavelengthrange_0031.rmap
+│       ├── jwst_nircam_0358.imap
+│       ├── jwst_nircam_abvegaoffset_0004.rmap
+│       ├── jwst_nircam_apcorr_0009.rmap
+│       ├── jwst_nircam_area_0012.rmap
+│       ├── jwst_nircam_bkg_0002.rmap
+│       ├── jwst_nircam_dark_0054.rmap
+│       ├── jwst_nircam_distortion_0034.rmap
+│       ├── jwst_nircam_drizpars_0001.rmap
+│       ├── jwst_nircam_extract1d_0007.rmap
+│       ├── jwst_nircam_filteroffset_0004.rmap
+│       ├── jwst_nircam_flat_0028.rmap
+│       ├── jwst_nircam_gain_0016.rmap
+│       ├── jwst_nircam_ipc_0003.rmap
+│       ├── jwst_nircam_linearity_0011.rmap
+│       ├── jwst_nircam_mask_0015.rmap
+│       ├── jwst_nircam_pars-backgroundstep_0003.rmap
+│       ├── jwst_nircam_pars-darkcurrentstep_0001.rmap
+│       ├── jwst_nircam_pars-darkpipeline_0002.rmap
+│       ├── jwst_nircam_pars-detector1pipeline_0008.rmap
+│       ├── jwst_nircam_pars-image2pipeline_0004.rmap
+│       ├── jwst_nircam_pars-jumpstep_0005.rmap
+│       ├── jwst_nircam_pars-outlierdetectionstep_0003.rmap
+│       ├── jwst_nircam_pars-resamplestep_0002.rmap
+│       ├── jwst_nircam_pars-sourcecatalogstep_0002.rmap
+│       ├── jwst_nircam_pars-spec2pipeline_0009.rmap
+│       ├── jwst_nircam_pars-tsophotometrystep_0003.rmap
+│       ├── jwst_nircam_pars-tweakregstep_0003.rmap
+│       ├── jwst_nircam_pars-wfsscontamstep_0001.rmap
+│       ├── jwst_nircam_pars-whitelightstep_0004.rmap
+│       ├── jwst_nircam_persat_0005.rmap
+│       ├── jwst_nircam_photom_0031.rmap
+│       ├── jwst_nircam_psfmask_0008.rmap
+│       ├── jwst_nircam_readnoise_0028.rmap
+│       ├── jwst_nircam_regions_0003.rmap
+│       ├── jwst_nircam_saturation_0011.rmap
+│       ├── jwst_nircam_sirskernel_0003.rmap
+│       ├── jwst_nircam_specwcs_0027.rmap
+│       ├── jwst_nircam_superbias_0022.rmap
+│       ├── jwst_nircam_trapdensity_0003.rmap
+│       ├── jwst_nircam_trappars_0003.rmap
+│       ├── jwst_nircam_tsophot_0003.rmap
+│       ├── jwst_nircam_wavelengthrange_0014.rmap
+│       ├── jwst_niriss_0313.imap
+│       ├── jwst_niriss_abvegaoffset_0004.rmap
+│       ├── jwst_niriss_apcorr_0010.rmap
+│       ├── jwst_niriss_area_0014.rmap
+│       ├── jwst_niriss_bkg_0005.rmap
+│       ├── jwst_niriss_dark_0041.rmap
+│       ├── jwst_niriss_distortion_0025.rmap
+│       ├── jwst_niriss_drizpars_0004.rmap
+│       ├── jwst_niriss_extract1d_0007.rmap
+│       ├── jwst_niriss_filteroffset_0010.rmap
+│       ├── jwst_niriss_flat_0023.rmap
+│       ├── jwst_niriss_gain_0011.rmap
+│       ├── jwst_niriss_ipc_0007.rmap
+│       ├── jwst_niriss_linearity_0022.rmap
+│       ├── jwst_niriss_mask_0025.rmap
+│       ├── jwst_niriss_nrm_0005.rmap
+│       ├── jwst_niriss_pars-backgroundstep_0003.rmap
+│       ├── jwst_niriss_pars-chargemigrationstep_0005.rmap
+│       ├── jwst_niriss_pars-cleanflickernoisestep_0003.rmap
+│       ├── jwst_niriss_pars-darkcurrentstep_0001.rmap
+│       ├── jwst_niriss_pars-darkpipeline_0002.rmap
+│       ├── jwst_niriss_pars-detector1pipeline_0005.rmap
+│       ├── jwst_niriss_pars-image2pipeline_0005.rmap
+│       ├── jwst_niriss_pars-jumpstep_0007.rmap
+│       ├── jwst_niriss_pars-outlierdetectionstep_0004.rmap
+│       ├── jwst_niriss_pars-resamplestep_0002.rmap
+│       ├── jwst_niriss_pars-sourcecatalogstep_0004.rmap
+│       ├── jwst_niriss_pars-spec2pipeline_0009.rmap
+│       ├── jwst_niriss_pars-tweakregstep_0012.rmap
+│       ├── jwst_niriss_pars-undersamplecorrectionstep_0001.rmap
+│       ├── jwst_niriss_pars-wfsscontamstep_0001.rmap
+│       ├── jwst_niriss_pastasoss_0006.rmap
+│       ├── jwst_niriss_pathloss_0003.rmap
+│       ├── jwst_niriss_persat_0007.rmap
+│       ├── jwst_niriss_photom_0042.rmap
+│       ├── jwst_niriss_readnoise_0011.rmap
+│       ├── jwst_niriss_saturation_0015.rmap
+│       ├── jwst_niriss_sirskernel_0002.rmap
+│       ├── jwst_niriss_speckernel_0006.rmap
+│       ├── jwst_niriss_specprofile_0010.rmap
+│       ├── jwst_niriss_specwcs_0017.rmap
+│       ├── jwst_niriss_superbias_0037.rmap
+│       ├── jwst_niriss_throughput_0005.rmap
+│       ├── jwst_niriss_trapdensity_0005.rmap
+│       ├── jwst_niriss_trappars_0004.rmap
+│       ├── jwst_niriss_wavelengthrange_0008.rmap
+│       ├── jwst_nirspec_0441.imap
+│       ├── jwst_nirspec_apcorr_0009.rmap
+│       ├── jwst_nirspec_area_0019.rmap
+│       ├── jwst_nirspec_barshadow_0007.rmap
+│       ├── jwst_nirspec_camera_0026.rmap
+│       ├── jwst_nirspec_chromcorr_0002.rmap
+│       ├── jwst_nirspec_collimator_0026.rmap
+│       ├── jwst_nirspec_cubepar_0015.rmap
+│       ├── jwst_nirspec_dark_0086.rmap
+│       ├── jwst_nirspec_dflat_0007.rmap
+│       ├── jwst_nirspec_disperser_0028.rmap
+│       ├── jwst_nirspec_extract1d_0018.rmap
+│       ├── jwst_nirspec_fflat_0030.rmap
+│       ├── jwst_nirspec_flat_0015.rmap
+│       ├── jwst_nirspec_fore_0026.rmap
+│       ├── jwst_nirspec_fpa_0028.rmap
+│       ├── jwst_nirspec_gain_0023.rmap
+│       ├── jwst_nirspec_ifufore_0017.rmap
+│       ├── jwst_nirspec_ifupost_0020.rmap
+│       ├── jwst_nirspec_ifuslicer_0018.rmap
+│       ├── jwst_nirspec_ipc_0006.rmap
+│       ├── jwst_nirspec_linearity_0017.rmap
+│       ├── jwst_nirspec_mask_0045.rmap
+│       ├── jwst_nirspec_msa_0027.rmap
+│       ├── jwst_nirspec_msaoper_0019.rmap
+│       ├── jwst_nirspec_ote_0030.rmap
+│       ├── jwst_nirspec_pars-adaptivetracemodelstep_0002.rmap
+│       ├── jwst_nirspec_pars-cleanflickernoisestep_0003.rmap
+│       ├── jwst_nirspec_pars-cubebuildstep_0001.rmap
+│       ├── jwst_nirspec_pars-darkcurrentstep_0003.rmap
+│       ├── jwst_nirspec_pars-darkpipeline_0003.rmap
+│       ├── jwst_nirspec_pars-detector1pipeline_0008.rmap
+│       ├── jwst_nirspec_pars-extract1dstep_0002.rmap
+│       ├── jwst_nirspec_pars-image2pipeline_0008.rmap
+│       ├── jwst_nirspec_pars-jumpstep_0006.rmap
+│       ├── jwst_nirspec_pars-outlierdetectionstep_0005.rmap
+│       ├── jwst_nirspec_pars-pictureframestep_0001.rmap
+│       ├── jwst_nirspec_pars-pixelreplacestep_0001.rmap
+│       ├── jwst_nirspec_pars-refpixstep_0003.rmap
+│       ├── jwst_nirspec_pars-resamplespecstep_0002.rmap
+│       ├── jwst_nirspec_pars-spec2pipeline_0016.rmap
+│       ├── jwst_nirspec_pars-tso3pipeline_0001.rmap
+│       ├── jwst_nirspec_pars-whitelightstep_0001.rmap
+│       ├── jwst_nirspec_pathloss_0011.rmap
+│       ├── jwst_nirspec_photom_0013.rmap
+│       ├── jwst_nirspec_pictureframe_0002.rmap
+│       ├── jwst_nirspec_psf_0002.rmap
+│       ├── jwst_nirspec_readnoise_0025.rmap
+│       ├── jwst_nirspec_refpix_0015.rmap
+│       ├── jwst_nirspec_saturation_0018.rmap
+│       ├── jwst_nirspec_sflat_0027.rmap
+│       ├── jwst_nirspec_sirskernel_0002.rmap
+│       ├── jwst_nirspec_superbias_0090.rmap
+│       ├── jwst_nirspec_wavecorr_0005.rmap
+│       ├── jwst_nirspec_wavelengthrange_0024.rmap
+│       ├── jwst_system_0068.imap
+│       ├── jwst_system_calver_0075.rmap
+│       └── jwst_system_datalvl_0002.rmap
+└── references
+    └── jwst
+        ├── fgs
+        ├── miri
+        ├── nircam
+        │   ├── jwst_nircam_area_0208.fits
+        │   ├── jwst_nircam_area_0214.fits
+        │   ├── jwst_nircam_area_0218.fits
+        │   ├── jwst_nircam_area_0222.fits
+        │   ├── jwst_nircam_area_0241.fits
+        │   ├── jwst_nircam_area_0242.fits
+        │   ├── jwst_nircam_area_0244.fits
+        │   ├── jwst_nircam_area_0264.fits
+        │   ├── jwst_nircam_area_0267.fits
+        │   ├── jwst_nircam_area_0268.fits
+        │   ├── jwst_nircam_area_0274.fits
+        │   ├── jwst_nircam_area_0279.fits
+        │   ├── jwst_nircam_area_0284.fits
+        │   ├── jwst_nircam_area_0288.fits
+        │   ├── jwst_nircam_area_0304.fits
+        │   ├── jwst_nircam_area_0306.fits
+        │   ├── jwst_nircam_area_0313.fits
+        │   ├── jwst_nircam_area_0316.fits
+        │   ├── jwst_nircam_area_0319.fits
+        │   ├── jwst_nircam_area_0323.fits
+        │   ├── jwst_nircam_area_0327.fits
+        │   ├── jwst_nircam_area_0330.fits
+        │   ├── jwst_nircam_dark_0331.fits
+        │   ├── jwst_nircam_dark_0334.fits
+        │   ├── jwst_nircam_dark_0337.fits
+        │   ├── jwst_nircam_dark_0338.fits
+        │   ├── jwst_nircam_dark_0341.fits
+        │   ├── jwst_nircam_dark_0342.fits
+        │   ├── jwst_nircam_dark_0343.fits
+        │   ├── jwst_nircam_dark_0344.fits
+        │   ├── jwst_nircam_dark_0403.fits
+        │   ├── jwst_nircam_dark_0424.fits
+        │   ├── jwst_nircam_distortion_0187.asdf
+        │   ├── jwst_nircam_distortion_0188.asdf
+        │   ├── jwst_nircam_distortion_0196.asdf
+        │   ├── jwst_nircam_distortion_0198.asdf
+        │   ├── jwst_nircam_distortion_0205.asdf
+        │   ├── jwst_nircam_distortion_0206.asdf
+        │   ├── jwst_nircam_distortion_0217.asdf
+        │   ├── jwst_nircam_distortion_0218.asdf
+        │   ├── jwst_nircam_distortion_0222.asdf
+        │   ├── jwst_nircam_distortion_0237.asdf
+        │   ├── jwst_nircam_distortion_0238.asdf
+        │   ├── jwst_nircam_distortion_0241.asdf
+        │   ├── jwst_nircam_distortion_0245.asdf
+        │   ├── jwst_nircam_distortion_0253.asdf
+        │   ├── jwst_nircam_distortion_0258.asdf
+        │   ├── jwst_nircam_distortion_0263.asdf
+        │   ├── jwst_nircam_distortion_0272.asdf
+        │   ├── jwst_nircam_distortion_0286.asdf
+        │   ├── jwst_nircam_distortion_0287.asdf
+        │   ├── jwst_nircam_distortion_0288.asdf
+        │   ├── jwst_nircam_distortion_0291.asdf
+        │   ├── jwst_nircam_distortion_0302.asdf
+        │   ├── jwst_nircam_filteroffset_0005.asdf
+        │   ├── jwst_nircam_filteroffset_0006.asdf
+        │   ├── jwst_nircam_filteroffset_0007.asdf
+        │   ├── jwst_nircam_filteroffset_0008.asdf
+        │   ├── jwst_nircam_flat_0643.fits
+        │   ├── jwst_nircam_flat_0647.fits
+        │   ├── jwst_nircam_flat_0651.fits
+        │   ├── jwst_nircam_flat_0665.fits
+        │   ├── jwst_nircam_flat_0677.fits
+        │   ├── jwst_nircam_flat_0681.fits
+        │   ├── jwst_nircam_flat_0701.fits
+        │   ├── jwst_nircam_flat_0704.fits
+        │   ├── jwst_nircam_flat_0707.fits
+        │   ├── jwst_nircam_flat_0716.fits
+        │   ├── jwst_nircam_flat_0722.fits
+        │   ├── jwst_nircam_flat_0723.fits
+        │   ├── jwst_nircam_flat_0724.fits
+        │   ├── jwst_nircam_flat_0728.fits
+        │   ├── jwst_nircam_flat_0730.fits
+        │   ├── jwst_nircam_flat_0735.fits
+        │   ├── jwst_nircam_flat_0749.fits
+        │   ├── jwst_nircam_flat_0753.fits
+        │   ├── jwst_nircam_flat_0754.fits
+        │   ├── jwst_nircam_flat_0758.fits
+        │   ├── jwst_nircam_flat_0760.fits
+        │   ├── jwst_nircam_flat_0768.fits
+        │   ├── jwst_nircam_gain_0088.fits
+        │   ├── jwst_nircam_gain_0089.fits
+        │   ├── jwst_nircam_gain_0090.fits
+        │   ├── jwst_nircam_gain_0091.fits
+        │   ├── jwst_nircam_gain_0092.fits
+        │   ├── jwst_nircam_gain_0093.fits
+        │   ├── jwst_nircam_gain_0094.fits
+        │   ├── jwst_nircam_gain_0095.fits
+        │   ├── jwst_nircam_gain_0096.fits
+        │   ├── jwst_nircam_gain_0097.fits
+        │   ├── jwst_nircam_linearity_0048.fits
+        │   ├── jwst_nircam_linearity_0049.fits
+        │   ├── jwst_nircam_linearity_0050.fits
+        │   ├── jwst_nircam_linearity_0051.fits
+        │   ├── jwst_nircam_linearity_0052.fits
+        │   ├── jwst_nircam_linearity_0053.fits
+        │   ├── jwst_nircam_linearity_0054.fits
+        │   ├── jwst_nircam_linearity_0055.fits
+        │   ├── jwst_nircam_linearity_0056.fits
+        │   ├── jwst_nircam_linearity_0057.fits
+        │   ├── jwst_nircam_mask_0060.fits
+        │   ├── jwst_nircam_mask_0061.fits
+        │   ├── jwst_nircam_mask_0064.fits
+        │   ├── jwst_nircam_mask_0065.fits
+        │   ├── jwst_nircam_mask_0069.fits
+        │   ├── jwst_nircam_mask_0072.fits
+        │   ├── jwst_nircam_mask_0074.fits
+        │   ├── jwst_nircam_mask_0076.fits
+        │   ├── jwst_nircam_mask_0077.fits
+        │   ├── jwst_nircam_mask_0078.fits
+        │   ├── jwst_nircam_pars-detector1pipeline_0008.asdf
+        │   ├── jwst_nircam_pars-image2pipeline_0003.asdf
+        │   ├── jwst_nircam_pars-jumpstep_0003.asdf
+        │   ├── jwst_nircam_pars-resamplestep_0001.asdf
+        │   ├── jwst_nircam_photom_0166.fits
+        │   ├── jwst_nircam_photom_0167.fits
+        │   ├── jwst_nircam_photom_0168.fits
+        │   ├── jwst_nircam_photom_0169.fits
+        │   ├── jwst_nircam_photom_0170.fits
+        │   ├── jwst_nircam_photom_0171.fits
+        │   ├── jwst_nircam_photom_0172.fits
+        │   ├── jwst_nircam_photom_0173.fits
+        │   ├── jwst_nircam_photom_0174.fits
+        │   ├── jwst_nircam_photom_0175.fits
+        │   ├── jwst_nircam_readnoise_0214.fits
+        │   ├── jwst_nircam_readnoise_0220.fits
+        │   ├── jwst_nircam_readnoise_0223.fits
+        │   ├── jwst_nircam_readnoise_0224.fits
+        │   ├── jwst_nircam_readnoise_0238.fits
+        │   ├── jwst_nircam_readnoise_0243.fits
+        │   ├── jwst_nircam_readnoise_0248.fits
+        │   ├── jwst_nircam_readnoise_0266.fits
+        │   ├── jwst_nircam_readnoise_0282.fits
+        │   ├── jwst_nircam_readnoise_0287.fits
+        │   ├── jwst_nircam_saturation_0096.fits
+        │   ├── jwst_nircam_saturation_0097.fits
+        │   ├── jwst_nircam_saturation_0098.fits
+        │   ├── jwst_nircam_saturation_0099.fits
+        │   ├── jwst_nircam_saturation_0100.fits
+        │   ├── jwst_nircam_saturation_0101.fits
+        │   ├── jwst_nircam_saturation_0102.fits
+        │   ├── jwst_nircam_saturation_0103.fits
+        │   ├── jwst_nircam_saturation_0104.fits
+        │   ├── jwst_nircam_saturation_0105.fits
+        │   ├── jwst_nircam_sirskernel_0002.asdf
+        │   ├── jwst_nircam_superbias_0180.fits
+        │   ├── jwst_nircam_superbias_0186.fits
+        │   ├── jwst_nircam_superbias_0212.fits
+        │   ├── jwst_nircam_superbias_0216.fits
+        │   ├── jwst_nircam_superbias_0220.fits
+        │   ├── jwst_nircam_superbias_0236.fits
+        │   ├── jwst_nircam_superbias_0237.fits
+        │   ├── jwst_nircam_superbias_0241.fits
+        │   ├── jwst_nircam_superbias_0243.fits
+        │   └── jwst_nircam_superbias_0246.fits
+        ├── niriss
+        ├── nirspec
+        └── system
+
+13 directories, 383 files
+```
+
+### 10 Oct 2026 by Oleg G.kapranov

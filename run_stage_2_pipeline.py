@@ -1,16 +1,19 @@
 import os
 import glob
-from jwst.pipeline import Detector1Pipeline, Image2Pipeline
 
-# FIX: Configure local CRDS cache routing before pipeline compilation
+# STEP 1: CONFIGURE ALL CRDS ENVIRONMENT CONFIGURATIONS FIRST (MUST PRECEED PIPELINE IMPORTS)
 os.environ["CRDS_SERVER_URL"] = "https://jwst-crds.stsci.edu"
 os.environ["CRDS_PATH"] = os.path.expanduser("~/crds_cache")
+os.environ["CRDS_CONTEXT"] = "jwst_1584.pmap"  # Locks down local rule verification mapping
 
-# FIX: Scan your new raw data repository path recursively across all filters
+# STEP 2: NOW IMPORT THE JWST PIPELINE ENGINE COMPONENTS SAFELY
+from jwst.pipeline import Detector1Pipeline, Image2Pipeline
+
+# Scan your new raw data repository path recursively across all filters
 uncal_files = glob.glob("./processed_stage1_raw/**/*_uncal.fits", recursive=True)
 print(f"Located {len(uncal_files)} raw files for pipeline processing inside ./processed_stage1_raw/")
 
-# FIX: Establish dedicated, decoupled directories for step calibrations
+# Establish dedicated, decoupled directories for step calibrations
 stage1_out_dir = "./processed_stage1_rate/"
 stage2_out_dir = "./processed_stage2_cal/"
 
