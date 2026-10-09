@@ -2,10 +2,19 @@
 
 ## Stage Prepare
 
-1. Download files `_asn.json`
-2. Download files `_csv.json`
-3. Download files `_uncal.fits`
-4. Setup Jupiter Notebook
+1. Install `astropy` astronomical tools and then activate virtual env.
+2. Download files `_asn.json` file is used to group and manage related
+   exposures for combined data products like mosaics and spectra, such
+   as Stage 3 science-ready mosaics or combined spectra.
+3. Download files `_csv.json` that lists all available uncalibrated or
+   intermediate data files (exposures) from an observation or program
+   that are candidates to be grouped together.
+4. Download files `_uncal.fits` for pipeline calibration to `_cal.fits`
+5. Setup Jupiter Notebook for figure out all commants by examples.
+
+```bash
+alias astro_env='python -m venv ~/astro_env; source ~/astro_env/bin/activate; export DISPLAY=:0'
+```
 
 ```
 (astro_env) bash> export MAST_API_TOKEN="YOUR_MAST_API_TOKENS"
@@ -134,7 +143,7 @@ All downloads finalized successfully!
 ...
 ```
 
-## Stage 1 Detector1Pipeline calibration `run_stage_1_pipeline.py`
+## Stage 1 Detector1Pipeline calibration `run_stage_2_pipeline.py`
 
 ```
 bash> export CRDS_SERVER_URL="https://jwst-crds.stsci.edu"
@@ -187,5 +196,11 @@ bash> du -sh ./processed_stage1_raw/*
 513M    ./processed_stage1_raw/jw01257-o003_t005_nircam_f444w-f470n
 440K    ./processed_stage1_raw/mastDownload
 ```
+
+after successfully compiled `_uncal.fits` to `_cal.fits` and `_i2d.fits`
+we can continue scientific reseaching in directory `processed_stage3`.
+
+Please read file `SCIENCE.md` or `astro_env> jupiter notebook` then any browser
+`01_jwst_data_reduction_and_cataloging.py`, for continue researching topic.
 
 ### 6 Oct 2026 by Oleg G.Kapranov
