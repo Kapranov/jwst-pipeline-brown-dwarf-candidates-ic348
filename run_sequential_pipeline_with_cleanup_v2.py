@@ -1,6 +1,13 @@
 import os
 import glob
 
+# The Step 5's space-conservation routine (`run_sequential_pipeline_with_cleanup.py`).
+# Processing multi-filter arrays (across your five concurrent `NIRCam` setups:
+# `F162M`, `F164n`, `F323n`, `F466n`, and `F470n`) sequentially while instantly
+# purging the heavy intermediate `_rate.fits` cache files is a pro-level way to
+# run a large survey field like `IC 348` on a local Linux machine. Your `60 GB`
+# CRDS local cache looks perfectly loaded and synced under context `jwst_1584.pmap`.
+
 # STEP 1: CONFIGURE ALL CRDS ENVIRONMENT CONFIGURATIONS FIRST
 os.environ["CRDS_SERVER_URL"] = "https://stsci.edu"
 os.environ["CRDS_PATH"] = os.path.expanduser("~/crds_cache")

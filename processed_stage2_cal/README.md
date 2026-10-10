@@ -1,5 +1,17 @@
 # Layout directory `processed_stage2_cal`
 
+The infrastructure of your `processed_stage2_cal/`  folder is complete.
+
+```
+|------------------------------------------------------------------------------------------------------------------------------------|
+| Short-Wave Baseline Filter	 | Narrow-Band Gas/Dust Filter  | Target Emission Science        | Intrinsic Property Revealed       |
+|--------------------------------|------------------------------|--------------------------------|-----------------------------------|
+| F150W2 (Broad-band)            | F162M / ``F164N`             | Continuum & [Fe II] iron lines | High-velocity protostellar shocks |
+| F322W2 (Broad-band)            | F323N                        | Molecular Hydrogen (H₂)        | Hot shocked gas filaments         |
+| F444W  (Broad-band)            | F466N / F470N                | Carbon Monoxide (CO) / H₂      | Entrained molecular outflows      |
+|------------------------------------------------------------------------------------------------------------------------------------|
+```
+
 ```
 27G	./processed_stage2_cal
 ```

@@ -9,6 +9,6 @@ IMPORTANT.md
 ./processed_stage1_rate/*.fit
 ./processed_stage1_raw/*.fits
 ./processed_stage1_raw/*.fit
-./processed_stage2/
 ./processed_stage2_cal/*.fits
 ./processed_stage2_cal/*.fit
+./processed_stage3/*.fits
