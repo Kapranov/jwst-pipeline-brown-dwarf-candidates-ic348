@@ -9,7 +9,7 @@ import glob
 # CRDS local cache looks perfectly loaded and synced under context `jwst_1584.pmap`.
 
 # STEP 1: CONFIGURE ALL CRDS ENVIRONMENT CONFIGURATIONS FIRST
-os.environ["CRDS_SERVER_URL"] = "https://stsci.edu"
+os.environ["CRDS_SERVER_URL"] = "https://jwst-crds.stsci.edu"
 os.environ["CRDS_PATH"] = os.path.expanduser("~/crds_cache")
 os.environ["CRDS_CONTEXT"] = "jwst_1584.pmap"  # Keep local pmap stable
 

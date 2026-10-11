@@ -13,7 +13,7 @@ import astropy.units as u
 # ==============================================================================
 # Setting these configurations dynamically roots the internal astropy and jwst
 # calibration pipelines directly into your local storage paths.
-os.environ["CRDS_SERVER_URL"] = "https://stsci.edu"
+os.environ["CRDS_SERVER_URL"] = "https://jwst-crds.stsci.edu"
 os.environ["CRDS_PATH"] = os.path.expanduser("~/crds_cache")
 os.environ["CRDS_CONTEXT"] = "jwst_1584.pmap"  # Ensures reference file consistency
 

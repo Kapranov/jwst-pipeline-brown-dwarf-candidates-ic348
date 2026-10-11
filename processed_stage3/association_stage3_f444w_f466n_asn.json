@@ -1,0 +1,45 @@
+{
+    "asn_rule": "Candidate_Asn",
+    "asn_pool": "none",
+    "program": "01257",
+    "asn_type": "image3",
+    "products": [
+        {
+            "name": "hh211_stacked_mosaic_f444w_f466n",
+            "members": [
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00003_nrcblong_cal.fits",
+                    "exptype": "science"
+                },
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00004_nrcblong_cal.fits",
+                    "exptype": "science"
+                },
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00002_nrcalong_cal.fits",
+                    "exptype": "science"
+                },
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00003_nrcalong_cal.fits",
+                    "exptype": "science"
+                },
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00002_nrcblong_cal.fits",
+                    "exptype": "science"
+                },
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00001_nrcblong_cal.fits",
+                    "exptype": "science"
+                },
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00004_nrcalong_cal.fits",
+                    "exptype": "science"
+                },
+                {
+                    "expname": "/home/kapranov/data_jwst/jwst-pipeline-brown-dwarf-candidates-ic348/processed_stage2_cal/jw01257003001_02101_00001_nrcalong_cal.fits",
+                    "exptype": "science"
+                }
+            ]
+        }
+    ]
+}

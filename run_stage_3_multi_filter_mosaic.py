@@ -5,7 +5,7 @@ from astropy.io import fits
 from jwst.pipeline import Image3Pipeline
 
 # 1. Anchor environment parameters
-os.environ["CRDS_SERVER_URL"] = "https://stsci.edu"
+os.environ["CRDS_SERVER_URL"] = "https://jwst-crds.stsci.edu"
 os.environ["CRDS_PATH"] = os.path.expanduser("~/crds_cache")
 os.environ["CRDS_CONTEXT"] = "jwst_1584.pmap"
 

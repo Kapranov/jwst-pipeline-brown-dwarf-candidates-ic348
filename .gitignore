@@ -4,6 +4,7 @@
 *.log
 
 IMPORTANT.md
+REPORT.md
 
 ./processed_stage1_rate/*.fits
 ./processed_stage1_rate/*.fit
