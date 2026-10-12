@@ -37,6 +37,11 @@ This operational matrix logs your active multi-filter data reduction channels ac
 ### Stage 1 (`calwebb_image1`) & Stage 2 (`calwebb_image2`) — [COMPLETED]
 * Raw sensor outputs were fully corrected, calibrated into individual exposures (`*_cal.fits`), and cross-checked via `jwst` pipeline version `3.0.0` using the `jwst_1584.pmap` CRDS tracking context.
 
+### 2. Narrow-Band Gas Continuum Extinction (A_V) Matrix — [COMPLETED & VISUALIZED]
+* **Objective:** Calculate localized gas extinction values directly across cluster stars.
+* **Methodology:** Leveraged companion narrow-band filtering layers (`F164N` and `F470N`) against baseline models to derive structural reddening parameters across the 205 discovery candidates.
+* **Key Outcome:** Successfully calculated column density variations and generated the spatial absorption layout (`ic348_gas_extinction_spatial_map.png`). Identified a clear physical gas column peak concentrated at the cluster core (\(A_V \approx 11.5\text{ mag}\) average core absorption) transitioning down to a diffuse baseline (\(A_V \approx 5.5\text{ mag}\)) along the peripheral dither tracks.
+
 ### Stage 3 (`calwebb_image3`) — [COMPLETED & STABILIZED]
 * **Co-Add Mosaic Loop:** programmatic Level 3 Association JSON files (`*_asn.json`) successfully grouped files by filter, outputting five coordinate-aligned science stacked images.
 * **Astrometric Vectorization Fix:** Patched a critical index exception error (`type numpy.ndarray doesn't define __round__ method`) by replacing scalar rounding loops with a vectorized array approach using `np.rint(pixel_x).astype(int)`. This allows all 205 celestial positions (\(RA, Dec\)) to project to local grid vectors (\(X, Y\)) simultaneously.
@@ -65,4 +70,4 @@ Below is the verified layout of your active workspace directory on your Arch Lin
     └── ic348_substellar_cmd.png               # Final scientific color-magnitude scatter output
 ```
 
-### 11 Oct 2026 by Oleg G.Kapranov
+### 10 Oct 2026 by Oleg G.Kapranov

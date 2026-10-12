@@ -40,7 +40,7 @@ else:
 
     ax.grid(True, linestyle=':', alpha=0.5)
 
-    output_cmd_path = os.path.join(stage3_dir, "ic348_substellar_cmd.png")
+    output_cmd_path = os.path.join(stage3_dir, "ic348_substellar_cmd_v2.png")
     plt.savefig(output_cmd_path, bbox_inches='tight', dpi=300)
     plt.close(fig)
 

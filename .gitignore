@@ -13,3 +13,5 @@ REPORT.md
 ./processed_stage2_cal/*.fits
 ./processed_stage2_cal/*.fit
 ./processed_stage3/*.fits
+
+./tmp/*
