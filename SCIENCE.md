@@ -18,6 +18,11 @@
 * **Objective:** Calculate localized gas extinction values directly across cluster stars.
 * **Methodology:** Leveraged companion narrow-band filtering layers (`F164N` Paschen-alpha/continuum and `F470N`) to gauge if candidates remain deeply embedded inside the molecular cloud core structures of the Perseus complex.
 
+### 3. Molecular Hydrogen (H2) Shock Wave Frontend Map — [COMPLETED & STABILIZED]
+* **Objective:** Isolate rotation-vibrational accretion hot spots and gaseous outflow fronts.
+* **Methodology:** Processed differential line ratios across the `F322W2` and `F323N` channel profiles.
+* **Key Outcome:** Successfully localized active outflow emitters from baseline brown dwarf signatures, exporting a high-contrast shock tracking diagram (`ic348_h2_shock_spatial_map.png`) mapped into the uniform `magma` color normalization spectrum.
+
 ---
 
 ## 🗺️ Spectral Band Matrix Map
