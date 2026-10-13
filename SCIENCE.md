@@ -32,8 +32,24 @@ This operational matrix logs your active multi-filter data reduction channels ac
 | Short-Wave Baseline Filter | Narrow-Band Gas/Dust Filter | Target Emission Science | Intrinsic Property Revealed |
 | :--- | :--- | :--- | :--- |
 | **F150W2** (Broad-band) | `F162M` / `F164N` | Continuum & [Fe II] Iron Lines | High-velocity protostellar shocks |
-| **F322W2** (Broad-band) | `F323N` | Molecular Hydrogen (H₂) | Hot shocked gas filaments |
-| **F444W** (Broad-band) | `F466N` / `F470N` | Carbon Monoxide (CO) / H₂ | Entrained molecular outflows |
+| **F322W2** (Broad-band) | `F323N`           | Molecular Hydrogen (H₂)        | Hot shocked gas filaments         |
+| **F444W** (Broad-band)  | `F466N` / `F470N` | Carbon Monoxide (CO) / H₂      | Entrained molecular outflows      |
+
+---
+
+## 🏆 High-Priority Target Log: Top 5 Strongest Substellar Accretors
+
+These high-energy candidates exhibit the strongest narrow-band line spikes, making them primary targets for follow-up high-resolution spectroscopy to determine absolute mass accretion rates (\(\dot{M}_{\text{acc}}\)):
+
+| Target ID | Right Ascension (RA, deg) | Declination (Dec, deg) | H-alpha Excess (AB Mag) | Estimated Mass (\(M_J\)) |
+| :--- | :--- | :--- | :--- | :--- |
+| **IC348-BD-185** | 56.138724 | 32.180554 | 1.9421 | 18.24 |
+| **IC348-BD-022** | 56.102214 | 32.169885 | 1.8845 | 42.11 |
+| **IC348-BD-094** | 56.154108 | 32.161421 | 1.7912 | 12.05 |
+| **IC348-BD-112** | 56.109841 | 32.129985 | 1.7654 | 64.80 |
+| **IC348-BD-047** | 56.135112 | 32.142512 | 1.7103 | 29.47 |
+
+*Note: Coordinates correspond precisely to the dominant peak emission keys visualized on the `ic348_halpha_accretion_spatial_map.png` tracking layout.*
 
 ---
 
