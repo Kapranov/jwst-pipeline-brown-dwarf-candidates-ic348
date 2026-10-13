@@ -53,6 +53,19 @@ These high-energy candidates exhibit the strongest narrow-band line spikes, maki
 
 ---
 
+## 🌌 Dual-Activity Nodes: Co-spatial Accretion & Outflow Tracking
+
+Cross-matching magnetospheric **Hα accretion markers** against **H₂ gas outflow shock vectors** isolates the most dynamically active substellar objects. These targets are simultaneously feeding from their inner disk rims while ejecting entrained materials into the surrounding cluster cloud matrix:
+
+| Target ID | Right Ascension (RA, deg) | Declination (Dec, deg) | Hα Excess (AB Mag) | H₂ Excess (AB Mag) | Mass (\(M_J\)) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **IC348-BD-132** | 56.101969 | 32.169937 | 2.0569 | 1.1420 | 30.72 |
+| **IC348-BD-184** | 56.154387 | 32.161549 | 1.9865 | 0.9845 | 51.68 |
+
+*Note: Targets with synchronized high-energy output fields indicate stable, early-stage disk-jet structures operating effectively down at sub-stellar mass boundary limits.*
+
+---
+
 ## 🛠️ Data Reduction Status & Bug Fix Log
 
 ### Stage 1 (`calwebb_image1`) & Stage 2 (`calwebb_image2`) — [COMPLETED]
