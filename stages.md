@@ -198,9 +198,9 @@ bash> du -sh ./processed_stage1_raw/*
 ```
 
 after successfully compiled `_uncal.fits` to `_cal.fits` and `_i2d.fits`
-we can continue scientific reseaching in directory `processed_stage3`.
+we can continue scientific reseaching in directory `./processed_stage3`.
 
 Please read file `SCIENCE.md` or `astro_env> jupiter notebook` then any browser
-`01_jwst_data_reduction_and_cataloging.py`, for continue researching topic.
+`01_jwst_data_reduction_and_cataloging.ipynb`, for continue of the researching.
 
 ### 6 Oct 2026 by Oleg G.Kapranov

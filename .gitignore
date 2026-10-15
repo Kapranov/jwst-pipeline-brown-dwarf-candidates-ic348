@@ -3,8 +3,8 @@
 *.fit
 *.log
 
-IMPORTANT.md
-REPORT.md
+report.md
+Kapranov_ApJ_JWST_IC348_v1.tar.gz
 
 ./processed_stage1_rate/*.fits
 ./processed_stage1_rate/*.fit

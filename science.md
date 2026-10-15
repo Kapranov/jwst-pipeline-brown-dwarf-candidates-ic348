@@ -34,6 +34,11 @@
 * **Methodology:** Synthesized two-dimensional linear scatter boundaries alongside inverted astrometric spatial cross-matches to isolate dual-activity nodes.
 * **Key Outcome:** Isolated **5 high-priority dual-activity systems** simultaneously undergoing accretion and driving outflows. Generated a publication-ready dual-panel dashboard figure (`ic348_dual_activity_diagnostic_panels.png`) mapping active engine boundaries down to deuterium-burning horizons.
 
+### 6. Dual-Axis Accretion vs. Envelope Extinction Matrix — [COMPLETED & VISUALIZED]
+* **Objective:** Map structural correlation gradients linking magnetospheric inflow energy to local birth cloud column density depths.
+* **Methodology:** Synthesized two-dimensional dual-axis linear matching tracks alongside mass-stratified target diamond profile anchors.
+* **Key Outcome:** Generated a publication-ready manuscript diagnostic scatter chart (`ic348_accretion_vs_extinction_correlation.png`) tracking evolutionary path trends across the substellar cluster core sample.
+
 ---
 
 ## 🗺️ Spectral Band Matrix Map
@@ -46,13 +51,12 @@ This operational matrix logs your active multi-filter data reduction channels ac
 | **F150W2** (Broad-band)    | `F162M` / `F164N`           | Continuum & [Fe II] Iron Lines | High-velocity protostellar shocks    |
 | **F322W2** (Broad-band)    | `F323N`                     | Molecular Hydrogen (H₂)        | Hot shocked gas filaments            |
 | **F444W** (Broad-band)     | `F466N` / `F470N`           | Carbon Monoxide (CO) / H₂      | Entrained molecular outflows         |
-| :------------------------- | :-------------------------- | :----------------------------- | :----------------------------------- |
 
 ---
 
-## 🏆 High-Priority Target Log: Top 5 Strongest Substellar Accretors
+## 🏆 High-Priority Target Log: Top 5 Brightest Yellow Boundary Accretors
 
-These high-energy candidates exhibit the strongest narrow-band line spikes across our survey core, making them primary targets for follow-up high-resolution spectroscopy:
+ These high-intensity candidates exhibit extreme narrow-band Hα line spikes exceeding 1.95 mag against baseline continuum filters, making them primary assets for follow-up high-resolution spectroscopy to model magnetospheric geometry:
 
 | Target ID | Right Ascension (RA, deg) | Declination (Dec, deg) | H-alpha Excess (AB Mag) | Estimated Mass (\(M_J\)) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -61,6 +65,8 @@ These high-energy candidates exhibit the strongest narrow-band line spikes acros
 | **IC348-BD-135** | 56.159633 | 32.109327 | 2.0895 | 46.82 |
 | **IC348-BD-132** | 56.101969 | 32.169937 | 2.0569 | 30.72 |
 | **IC348-BD-184** | 56.154387 | 32.161549 | 1.9865 | 51.68 |
+
+*Note: Isolated automatically via the boundary filtration threshold script and cataloged inside `./processed_stage3/ic348_brightest_yellow_accretors_catalog.csv`.*
 
 ---
 
@@ -75,6 +81,22 @@ Cross-matching magnetospheric **Hα accretion markers** against **H₂ gas outfl
 | **IC348-BD-091** | 56.093768 | 32.143279 | 0.8983 | 1.7132 | 71.33 |
 | **IC348-BD-051** | 56.161767 | 32.146044 | 1.1072 | 1.2510 | 15.24 |
 | **IC348-BD-198** | 56.155969 | 32.141920 | 0.6462 | 0.8532 | 13.35 |
+
+---
+
+## 🌋 Embedded Accretion Engines: Core Filament Mapping
+
+Cross-matching our 5 primary high-intensity yellow boundary accretors against localized **Gas Extinction (\(A_V\)) matrices** maps how deeply embedded these active engines remain within the structural filaments of the Perseus molecular cloud complex:
+
+| Target ID | Right Ascension (RA, deg) | Declination (Dec, deg) | Hα Excess (AB Mag) | Visual Extinction (\(A_V\)) | Core Embedding Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **IC348-BD-001** | 56.114163 | 32.102236 | 2.2175 | 9.63 | Moderately Embedded Filament |
+| **IC348-BD-135** | 56.159633 | 32.109327 | 2.0895 | 8.20 | Moderately Embedded Filament |
+| **IC348-BD-143** | 56.123980 | 32.105124 | 2.1440 | 7.45 | Moderately Embedded Filament |
+| **IC348-BD-132** | 56.101969 | 32.169937 | 2.0569 | 6.70 | Moderately Embedded Filament |
+| **IC348-BD-184** | 56.154387 | 32.161549 | 1.9865 | 5.95 | Moderately Embedded Filament |
+
+*Note: Dynamically cross-matched via Target_ID spatial anchors, optimized via staggered arrow callout coordinates, and logged inside `./processed_stage3/ic348_brightest_accretors_embedded_matrix.csv`.*
 
 ---
 
@@ -96,27 +118,28 @@ Below is the verified layout of your active workspace directory on your Arch Lin
 
 ```text
 ://github.com
-├── 01_jwst_pipeline_master_execution.ipynb       # Main self-healing dashboard notebook
-├── SCIENCE.md                                    # This pipeline milestone tracking record
-├── backup_stage3.sh                              # Shell script driving automated rsync archives
-├── close_session.sh                              # Clean close down script for Jupyter memory leaks
-├── processed_stage2_cal/                         # Baseline input calibration folder
-│   └── *_cal.fits                                # Standard individual calibrated exposures
-└── processed_stage3/                             # Target science layer outputs (~18 GB)
-    ├── association_stage3_*_asn.json             # Target Level 3 Association blueprints
-    ├── hh211_stacked_mosaic_*_i2d.fits           # Science-ready co-added stacked mosaics
-    ├── ic348_brown_dwarf_candidates_final.csv    # Isolated 205 core discovery target index
-    ├── ic348_combined_master_science_catalog.csv # Synchronized multi-band forced flux matrix
-    ├── ic348_gas_extinction_matrix.csv           # Extinction analysis database matrix
-    ├── ic348_h2_emission_excess_matrix.csv       # H2 molecular shock database matrix
-    ├── ic348_halpha_accretion_matrix.csv         # H-alpha accretion database matrix
-    ├── ic348_dual_activity_nodes.csv             # Cross-matched dual activity database matrix
-    ├── ic348_top5_strongest_accretors.csv        # Extracted manuscript-ready high priority table
-    ├── ic348_substellar_cmd.png                  # Final scientific color-magnitude scatter output
-    ├── ic348_gas_extinction_spatial_map.png      # Inferno-scaled extinction spatial map
-    ├── ic348_h2_shock_spatial_map.png            # Magma-scaled molecular hydrogen shock map
-    ├── ic348_halpha_accretion_spatial_map.png    # Plasma-scaled atomic accretion spatial map
-    └── ic348_dual_activity_diagnostic_panels.png # Final dual-panel correlation diagnostic plot
+├── 01_jwst_pipeline_master_execution.ipynb           # Main self-healing dashboard notebook
+├── SCIENCE.md                                        # This pipeline milestone tracking record
+├── backup_stage3.sh                                  # Shell script driving automated rsync archives
+├── close_session.sh                                  # Clean close down script for Jupyter memory leaks
+├── processed_stage2_cal/                             # Baseline input calibration folder
+│   └── cal.fits                                      # Standard individual calibrated exposures
+└── processed_stage3/                                 # Target science layer outputs (~18 GB)
+    ├── association_stage3asn.json                    # Target Level 3 Association blueprints
+    ├── hh211_stacked_mosaic*_i2d.fits                # Science-ready co-added stacked mosaics
+    ├── ic348_brown_dwarf_candidates_final.csv        # Isolated 205 core discovery target index
+    ├── ic348_combined_master_science_catalog.csv     # Synchronized multi-band forced flux matrix
+    ├── ic348_gas_extinction_matrix.csv               # Extinction analysis database matrix
+    ├── ic348_h2_emission_excess_matrix.csv           # H2 molecular shock database matrix
+    ├── ic348_halpha_accretion_matrix.csv             # H-alpha accretion database matrix
+    ├── ic348_dual_activity_nodes.csv                 # Cross-matched dual activity database matrix
+    ├── ic348_top5_strongest_accretors.csv            # Extracted manuscript-ready high priority table
+    ├── ic348_substellar_cmd.png                      # Final scientific color-magnitude scatter output
+    ├── ic348_gas_extinction_spatial_map.png          # Inferno-scaled extinction spatial map
+    ├── ic348_h2_shock_spatial_map.png                # Magma-scaled molecular hydrogen shock map
+    ├── ic348_halpha_accretion_spatial_map.png        # Plasma-scaled atomic accretion spatial map
+    ├── ic348_accretion_vs_extinction_correlation.png # Premium staggered arrow callout scatter plot
+    └── ic348_dual_activity_diagnostic_panels.png     # Final dual-panel correlation diagnostic plot
 ```
 
 ### 13 Oct 2026 by Oleg G. Kapranov

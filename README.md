@@ -1,4 +1,4 @@
-# Catalog of 205 Brown Dwarf candidates in IC 348
+# JWST pipeline fully operational catalog of 205 brown dwarf candidates.
 
 ## Press release
 
@@ -40,7 +40,7 @@ Band                                Wavelength   Camera
 Infrared (Purple)                   1.62 μm      JWST NIRCam
 Infrared (Purple) Fe II	            1.64 μm      JWST NIRCam
 Infrared (Blue) methane             2.10 μm      JWST NIRCam
-Infrared (Blue) molecular hydrogen	3.23 μm      JWST NIRCam
+Infrared (Blue) molecular hydrogen  3.23 μm      JWST NIRCam
 Infrared (Cyan) PAH                 3.35 μm      JWST NIRCam
 Infrared (Green) CO                 4.60 μm      JWST NIRCam
 Infrared (Orange) CO                4.66 μm      JWST NIRCam
@@ -51,7 +51,7 @@ Infrared (Red) molecular hydrogen   4.70 μm      JWST NIRCam
 
 ```
 [1] Raw Inputs      ➔   [2] Run Stage 1 Pipeline   ➔   [3] Run Stage 2 Pipeline   ➔   [4] Run Stage 3 Pipeline
-(_uncal.fits)           (calwebb_detector1)            (calwebb_image2)               (calwebb_image3 via your ASN)
+(_uncal.fits)           (calwebb_detector1)            (calwebb_image2)               (calwebb_image3 via ASN)
 ```
 
 ```
@@ -151,17 +151,11 @@ bash> python -m venv ~/astro_env
 (astro_env) # jupiter notebook
 ```
 
-- STAGE 0 `00_jwst_pipeline_master_execution.ipynb`
 - STAGE 1 `00_jwst_pipeline_master_execution.ipynb`
 - STAGE 2 `00_jwst_pipeline_master_execution.ipynb`
-- STAGE 3 `not ready`
-- STAGE 4 `not ready`
-- STAGE 5 `not ready`
+- STAGE 3 `01_jwst_pipeline_master_execution.ipynb`
 
-The full schema pipeline in file `list_project.md`
-
-JWST pipeline fully operational and delivering a clean, publication-ready
-catalog of 205 brown dwarf candidates in IC 348.
+The full a schema pipeline in file `report.md`
 
 [1]: https://esawebb.org/images/weic2322a/
 [2]: https://github.com/spacetelescope/jdat_notebooks
