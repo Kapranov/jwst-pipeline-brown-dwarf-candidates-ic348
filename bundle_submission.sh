@@ -34,6 +34,7 @@ mkdir -p "$SUBMIT_DIR"
 # 3. Synchronize core manuscript files and verification figures
 echo -e "${CYAN}[3/5] Moving validated publication coordinates...${NC}"
 cp manuscript.tex "$SUBMIT_DIR/"
+cp manuscript.pdf "$SUBMIT_DIR/"
 
 # Copy figures exactly matching the integrated LaTeX image calls
 cp ./processed_stage3/ic348_substellar_cmd.png "$SUBMIT_DIR/"

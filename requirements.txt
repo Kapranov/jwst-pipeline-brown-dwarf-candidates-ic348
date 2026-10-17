@@ -1,5 +1,27 @@
-astropy>=8.0.1
-astroquery>=0.4.11
-matplotlib>=3.11.2
+# ==============================================================================
+# 🛰️ JWST Young Substellar Horizons Pipeline: Dependency Matrix
+# Release Profile: Modern 2026 Production Environment
+# System Platform: Arch Linux Core Cluster Framework
+# ==============================================================================
+
+# Core Computational & Modern Data Matrix Elements
 numpy>=2.5.3
 pandas>=3.0.6
+scipy>=1.13.0
+
+# Space Telescope Astrometric & Metadata Engines
+astropy>=8.0.1
+astroquery>=0.4.11
+
+# Scientific Graphics & Manuscript Diagnostic Vector Engines
+matplotlib>=3.11.2
+
+# Interactive Notebook Development & Diagnostics Tracking
+notebook>=7.2.0
+ipykernel>=6.29.0
+
+# Official Space Telescope JWST Instrument Pipeline Framework
+jwst>=1.16.0
+stsci.tools>=4.0.0
+stsci.imagestats>=1.8.4
+crds>=11.17.0

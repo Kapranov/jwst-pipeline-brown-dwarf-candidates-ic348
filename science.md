@@ -143,3 +143,7 @@ Below is the verified layout of your active workspace directory on your Arch Lin
 ```
 
 ### 13 Oct 2026 by Oleg G. Kapranov
+
+[1]: https://github.com/AASJournals/AASTeX60
+[2]: https://journals.aas.org/aastex-v6-3-author-guide/
+[3]:
