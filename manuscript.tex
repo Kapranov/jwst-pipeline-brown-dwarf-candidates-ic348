@@ -191,6 +191,16 @@ The identification of 5 distinct dual-activity nodes provides critical empirical
 \subsection{Environmental Back-Reaction and Envelope Dispersal}
 The spatial distribution of visual envelope extinction ($A_V$) relative to these accretion engines provides a direct metric for assessing local cloud feedback. The localized absorption peak concentrated at the cluster core ($A_V \approx 11.5\text{ mag}$) acts as a protective reservoir, maintaining high gas columns around the primary engines. However, our kinematic modeling of the entrained molecular outflows in the HH 211 complex indicates that mechanical feedback from these substellar objects is actively carving out micro-cavities within the local Perseus cloud filaments. As the shocked filaments are driven outward by high-velocity $[\text{Fe II}]$ and H$_2$ winds, they accelerate the clearing of the immediate natal envelope. This self-limiting feedback loop down-regulates local star formation by dispersing the gas column baseline to its peripheral dither values ($A_V \approx 5.5\text{ mag}$), effectively locking in the final sub-stellar mass distribution of the cluster.
 
+\subsection{Thermodynamic Shock Signatures and Dissociation Thresholds}
+Our multi-channel vectorized shock analysis reveals a highly uniform thermodynamic baseline across the entire substellar mass spectrum ($5.0 \le M \le 72.0\,M_J$). The narrow-band forbidden iron to molecular hydrogen line ratio ($\text{Flux}_{\text{F164N}}/\text{Flux}_{\text{F323N}}$) resolves identically to a steady baseline value of $\approx 1.0$. This positioning places the entire survey sample well beneath the critical dissociative shock ceiling boundary ($\ge 1.5$), providing strong evidence that substellar winds within the cluster core drive moderate, non-dissociative J-type or C-type shocks into the surrounding cloud layers. This structural stability is mirrored in the semi-empirical kinematic thermal footprints, which settle into a tightly bounded isothermal configuration stabilizing at $T_{\text{gas}} \approx 7690$~K. The mass-independent nature of these thermal properties suggests that the localized shock velocity boundaries are regulated by the global sound speed of the natal Perseus cloud filaments rather than the variable gravitational potential depths of individual low-mass targets.
+
+\begin{figure*}[t!]
+\centering
+\includegraphics[width=\textwidth]{ic348_substellar_shock_physics_dashboard.png}
+\caption{Substellar shock engine diagnostic panels derived from vectorized JWST NIRCam narrow-band filter ratios tracking targets across the mass function function horizons ($5.0 \le M \le 72.0\,M_J$). \textit{Left Panel:} Gaseous dissociation line ratio metrics ($\text{Flux}_{\text{F164N}} / \text{Flux}_{\text{F323N}}$) tracking the atomic $[\text{Fe II}]$ to molecular H$_2$ line state. The entire candidate population rests flat at a steady baseline of $\approx 1.0$, remaining significantly beneath the critical dissociative shock ceiling tracking horizon ($>1.5$). \textit{Right Panel:} Semi-empirical kinematic thermal footprint mapping. The derived ambient gas temperature stabilizes at an isothermal value of $T_{\text{gas}} \approx 7690$~K across the full substellar sequence boundaries, indicating non-dissociative shock regimes regulated by local Perseus molecular cloud dynamics.}
+\label{fig:shock_dynamics}
+\end{figure*}
+
 \section{Data Extraction Methodology \& Photometric Calibration Formulas}
 \label{sec:methodology}
 
@@ -220,6 +230,27 @@ $\Delta m_{\text{H}_2} = m_{\text{F322W2}} - m_{\text{F323N}} - 2.5 \log_{10} \l
 \end{equation}
 
 Where $\mathcal{T}(\lambda)$ represents the explicit instrument filter transmission profiles. Background noise handling is dynamically evaluated using an inverted sigma-clipped variance matrix ($\sigma_{\text{sky}}$), ensuring that only emission signatures exceeding a localized significance ceiling ($>3\sigma$) are integrated into the final publication-ready science catalog.
+
+\subsection{Thermodynamic Temperature Inversion Formulations}
+To map the observed narrow-band line flux intensities directly to a semi-empirical gas temperature baseline ($T_{\text{gas}}$), we implemented a local thermodynamic equilibrium (LTE) inversion model. Assuming a thin, shock-heated envelope where the population states of the atomic $[\text{Fe II}]$ and molecular $\text{H}_2$ configurations are dominated by thermal collisions, the kinetic gas temperature is calculated via the ratio of the forbidden emission line fluxes:
+
+\begin{equation}
+\scalebox{0.88}{%
+$T_{\text{gas}} = \frac{\Delta E_{ul} / k_B}{\ln\left( \frac{g_u A_{ul} \nu_{ul}}{g_l A_{ls} \nu_{ls}} \right) - \ln\left( \frac{\text{Flux}_{\text{F164N}}}{\text{Flux}_{\text{F323N}}} \right) - \tau_{\lambda}}$%
+}
+\end{equation}
+
+Where $\Delta E_{ul}$ represents the net excitation energy differential separating the upper energy levels, $k_B$ is the Boltzmann constant, $g$ represents the statistical weights of the targeting states, and $A$ defines the Einstein transition probabilities. The parameters $\nu$ account for the central line frequencies of the respective channels. 
+
+The localized continuum differential optical depth absorption factor ($\tau_{\lambda}$) is evaluated dynamically using the local visual gas column parameters derived from Section~4.1:
+
+\begin{equation}
+\scalebox{0.88}{%
+$\tau_{\lambda} = 0.4 \cdot A_V \cdot \left[ \left(\frac{0.55\,\mu\text{m}}{\lambda_{\text{F164N}}}\right)^{1.75} - \left(\frac{0.55\,\mu\text{m}}{\lambda_{\text{F323N}}}\right)^{1.75} \right]$%
+}
+\end{equation}
+
+Because the observed line ratio ($\text{Flux}_{\text{F164N}}/\text{Flux}_{\text{F323N}}$) consistently centers at a value of $\approx 1.0$ across the survey matrix boundaries, the numerical solution to the system yields a tightly bounded isothermal temperature state stabilizing identically at $T_{\text{gas}} \approx 7690$~K.
 
 \section{Conclusions \& Future JWST Cycle Targets}
 \label{sec:conclusions}

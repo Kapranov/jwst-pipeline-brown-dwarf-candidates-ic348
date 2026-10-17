@@ -138,6 +138,7 @@ Below is the verified layout of your active workspace directory on your Arch Lin
     ├── ic348_gas_extinction_spatial_map.png          # Inferno-scaled extinction spatial map
     ├── ic348_h2_shock_spatial_map.png                # Magma-scaled molecular hydrogen shock map
     ├── ic348_halpha_accretion_spatial_map.png        # Plasma-scaled atomic accretion spatial map
+    ├── ic348_shock_dynamics_diagnostic_panels.png    # Two-panel 7690 K line ratio vs mass diagnostic plot
     ├── ic348_accretion_vs_extinction_correlation.png # Premium staggered arrow callout scatter plot
     └── ic348_dual_activity_diagnostic_panels.png     # Final dual-panel correlation diagnostic plot
 ```

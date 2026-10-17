@@ -41,6 +41,7 @@ cp ./processed_stage3/ic348_substellar_cmd.png "$SUBMIT_DIR/"
 cp ./processed_stage3/ic348_halpha_accretion_spatial_map_optimized.png "$SUBMIT_DIR/"
 cp ./processed_stage3/ic348_dual_activity_diagnostic_panels.png "$SUBMIT_DIR/"
 cp ./processed_stage3/ic348_accretion_vs_extinction_correlation.png "$SUBMIT_DIR/"
+cp ./processed_stage3/ic348_substellar_shock_physics_dashboard.png "$SUBMIT_DIR/"
 
 # 4. Generate the compressed tarball vector archive
 echo -e "${CYAN}[4/5] Executing gzip file compression steps...${NC}"
