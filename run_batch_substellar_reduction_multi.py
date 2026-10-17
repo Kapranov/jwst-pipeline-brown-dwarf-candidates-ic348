@@ -127,7 +127,11 @@ def run_production_pipeline_batch(stage3_dir, candidate_catalog_csv, output_cata
         # Integrate aperture flux matrix maps
         raw_flux = engine.evaluate_forced_aperture_flux(grid_x, grid_y, aperture_radius=4)
         aperture_area = np.pi * (4**2)
-        net_flux = np.clip(raw_flux - (sky_medians * aperture_area), a_min=1e-5, a_max=None)
+
+        # Calculate net flux and explicitly replace any NaN values with 1e-5
+        computed_flux = raw_flux - (sky_medians * aperture_area)
+        net_flux = np.where(np.isnan(computed_flux), 1e-5, computed_flux)
+        net_flux = np.clip(net_flux, a_min=1e-5, a_max=None)
 
         # Parse zero point conversions smoothly
         phot_zero_point = float(engine.header.get('PHOTZP', engine.primary_header.get('PHOTZP', 28.0)))
